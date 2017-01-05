@@ -58,19 +58,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// import Home from './app/components/Home.js'
-
 	(0, _reactDom.render)(_routes2.default, document.getElementById('app'));
-
-	// const Home = React.createClass({
-	//   render() {
-	//     return (
-	//       <div>
-	//         <h1>cool story bro</h1>
-	//       </div>
-	//     );
-	//   }
-	// });
 
 /***/ },
 /* 1 */
@@ -21499,13 +21487,17 @@
 
 	var _reactRouter2 = _interopRequireDefault(_reactRouter);
 
-	var _Home = __webpack_require__(234);
+	var _Main = __webpack_require__(234);
 
-	var _Home2 = _interopRequireDefault(_Home);
+	var _Main2 = _interopRequireDefault(_Main);
 
-	var _HomeContainer = __webpack_require__(237);
+	var _HomeContainer = __webpack_require__(240);
 
 	var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
+
+	var _EpisodesContainer = __webpack_require__(246);
+
+	var _EpisodesContainer2 = _interopRequireDefault(_EpisodesContainer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21514,8 +21506,9 @@
 	  { history: _reactRouter.hashHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: '/', component: _Home2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomeContainer2.default })
+	    { path: '/', component: _Main2.default },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomeContainer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes', component: _EpisodesContainer2.default })
 	  )
 	);
 
@@ -26436,25 +26429,31 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TopNav = __webpack_require__(235);
+	var _TopNavContainer = __webpack_require__(235);
 
-	var _TopNav2 = _interopRequireDefault(_TopNav);
+	var _TopNavContainer2 = _interopRequireDefault(_TopNavContainer);
+
+	var _FooterContainer = __webpack_require__(238);
+
+	var _FooterContainer2 = _interopRequireDefault(_FooterContainer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Home = _react2.default.createClass({
-	  displayName: 'Home',
+	var Main = _react2.default.createClass({
+	  displayName: 'Main',
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      _react2.default.createElement(_TopNav2.default, null),
-	      this.props.children
+	      _react2.default.createElement(_TopNavContainer2.default, null),
+	      _react2.default.createElement('hr', null),
+	      this.props.children,
+	      _react2.default.createElement(_FooterContainer2.default, null)
 	    );
 	  }
 	});
 
-	module.exports = Home;
+	module.exports = Main;
 
 /***/ },
 /* 235 */
@@ -26466,33 +26465,24 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TopNavLists = __webpack_require__(236);
+	var _TopNav = __webpack_require__(236);
+
+	var _TopNav2 = _interopRequireDefault(_TopNav);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var TopNav = _react2.default.createClass({
-	  displayName: 'TopNav',
+	var TopNavContainer = _react2.default.createClass({
+	  displayName: 'TopNavContainer',
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Blogological'
-	      ),
-	      _react2.default.createElement(_TopNavLists.NavBar, null),
-	      _react2.default.createElement(_TopNavLists.NavSocial, null),
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Hip Hop 4 Better Dayz'
-	      )
+	      _react2.default.createElement(_TopNav2.default, null)
 	    );
 	  }
 	});
 
-	module.exports = TopNav;
+	module.exports = TopNavContainer;
 
 /***/ },
 /* 236 */
@@ -26504,50 +26494,98 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _TopNavLists = __webpack_require__(237);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var styles = {
-	  color: "red"
-	};
+	var TopNav = _react2.default.createClass({
+	  displayName: 'TopNav',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        { className: 'top-logo' },
+	        'Blogological'
+	      ),
+	      _react2.default.createElement(_TopNavLists.TopNavBar, null),
+	      _react2.default.createElement(_TopNavLists.TopNavSocial, null),
+	      _react2.default.createElement(
+	        'p',
+	        { className: 'top-slogan' },
+	        'Hip Hop 4 Better Dayz'
+	      )
+	    );
+	  }
+	});
 
-	var NavBar = _react2.default.createClass({
-	  displayName: 'NavBar',
+	module.exports = TopNav;
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var TopNavBar = _react2.default.createClass({
+	  displayName: 'TopNavBar',
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
 	      _react2.default.createElement(
 	        'ul',
-	        { style: styles.container },
+	        { className: 'top-nav-bar' },
 	        _react2.default.createElement(
-	          'li',
-	          null,
-	          'Home | '
+	          _reactRouter.Link,
+	          { to: '/' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Home |'
+	          )
 	        ),
 	        _react2.default.createElement(
-	          'li',
-	          null,
-	          '\xA0 HH&I | '
+	          _reactRouter.Link,
+	          { to: '/hhandi' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'HH&I |'
+	          )
 	        ),
 	        _react2.default.createElement(
-	          'li',
-	          null,
-	          '\xA0 Episodes '
+	          _reactRouter.Link,
+	          { to: '/episodes' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Episodes'
+	          )
 	        )
 	      )
 	    );
 	  }
 	});
 
-	var NavSocial = _react2.default.createClass({
-	  displayName: 'NavSocial',
+	var TopNavSocial = _react2.default.createClass({
+	  displayName: 'TopNavSocial',
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
 	      _react2.default.createElement(
 	        'ul',
-	        { style: styles.container },
+	        { className: 'top-nav-social' },
 	        _react2.default.createElement(
 	          'li',
 	          null,
@@ -26589,32 +26627,344 @@
 	  }
 	});
 
-	module.exports = { NavBar: NavBar, NavSocial: NavSocial };
+	module.exports = { TopNavBar: TopNavBar, TopNavSocial: TopNavSocial };
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var React = __webpack_require__(1);
+	var _react = __webpack_require__(1);
 
-	var HomeContainer = React.createClass({
-	  displayName: 'HomeContainer',
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Footer = __webpack_require__(239);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var FooterContainer = _react2.default.createClass({
+	  displayName: 'FooterContainer',
 	  render: function render() {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'Weorld!!!'
-	      )
+	      _react2.default.createElement(_Footer2.default, { close: 'To Educate. To Entertain. To Inspire.' })
+	    );
+	  }
+	});
+
+	module.exports = FooterContainer;
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Footer = _react2.default.createClass({
+	    displayName: 'Footer',
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'bottom-bar' },
+	                this.props.close
+	            )
+	        );
+	    }
+	});
+
+	exports.default = Footer;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Home = __webpack_require__(241);
+
+	var _Home2 = _interopRequireDefault(_Home);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var HomeContainer = _react2.default.createClass({
+	  displayName: 'HomeContainer',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Home2.default, null)
 	    );
 	  }
 	});
 
 	module.exports = HomeContainer;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Image = __webpack_require__(242);
+	var Text = __webpack_require__(243);
+	var Video = __webpack_require__(244);
+	var Slideshow = __webpack_require__(245);
+
+	var Home = _react2.default.createClass({
+	  displayName: 'Home',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(Image, { src: '../public/images/IHeartRap.jpg' }),
+	      _react2.default.createElement(Text, { msg: 'Cue Blogological.com. This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all \u2014 from the battle-hardened hip hop head to the soon-to-be-Stan\u2014 and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. \r Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.\r Click here for more.' }),
+	      _react2.default.createElement(Text, { msg: 'Press play for a look at pop culture\xA0through marketing, branding and business strategy (or is it the other way round?!)\r Click here for more episodes' }),
+	      _react2.default.createElement(Video, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
+	      _react2.default.createElement('hr', null),
+	      _react2.default.createElement(Slideshow, { src: '../public/images/illmatic.jpg' })
+	    );
+	  }
+	});
+
+	module.exports = Home;
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Image = _react2.default.createClass({
+	  displayName: 'Image',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement('img', { src: this.props.src })
+	    );
+	  }
+	});
+
+	module.exports = Image;
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Text = _react2.default.createClass({
+	  displayName: 'Text',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        this.props.msg
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Text;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Video = _react2.default.createClass({
+	  displayName: "Video",
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      _react2.default.createElement("iframe", { src: this.props.src, width: this.props.width, height: this.props.height, frameBorder: "0", allowFullScreen: true })
+	    );
+	  }
+	});
+
+	module.exports = Video;
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Slideshow = _react2.default.createClass({
+	  displayName: 'Slideshow',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement('img', { src: this.props.src })
+	    );
+	  }
+	});
+
+	module.exports = Slideshow;
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Episodes = __webpack_require__(247);
+
+	var _Episodes2 = _interopRequireDefault(_Episodes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var EpisodesContainer = _react2.default.createClass({
+	  displayName: 'EpisodesContainer',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Episodes2.default, null)
+	    );
+	  }
+	});
+
+	module.exports = EpisodesContainer;
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _TopNav = __webpack_require__(236);
+
+	var _TopNav2 = _interopRequireDefault(_TopNav);
+
+	var _Text = __webpack_require__(243);
+
+	var _Text2 = _interopRequireDefault(_Text);
+
+	var _Title = __webpack_require__(248);
+
+	var _Title2 = _interopRequireDefault(_Title);
+
+	var _Video = __webpack_require__(244);
+
+	var _Video2 = _interopRequireDefault(_Video);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Episodes = _react2.default.createClass({
+	  displayName: 'Episodes',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Text2.default, { msg: 'Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all \u2013 from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.\r So, please, let\u2019s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.' }),
+	      _react2.default.createElement('hr', null),
+	      _react2.default.createElement(_Title2.default, { msg: 'Episode 1:' }),
+	      _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	      _react2.default.createElement(_Text2.default, { msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
+	      _react2.default.createElement('hr', null),
+	      _react2.default.createElement(_Title2.default, { msg: 'Episode 2:' }),
+	      _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
+	      _react2.default.createElement(_Text2.default, { msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	    );
+	  }
+	});
+
+	module.exports = Episodes;
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Title = _react2.default.createClass({
+	  displayName: 'Title',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        this.props.msg
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Title;
 
 /***/ }
 /******/ ]);

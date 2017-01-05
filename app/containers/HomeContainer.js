@@ -1,10 +1,11 @@
-var React = require('react');
+import React from 'react';
+import Home from '../components/Home';
 
 const HomeContainer = React.createClass({
   render() {
     return (
       <div>
-        <h1>Weorld!!!</h1>
+        <Home />
       </div>
     );
   }

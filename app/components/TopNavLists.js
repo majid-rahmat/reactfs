@@ -1,28 +1,25 @@
 import React from 'react';
-var styles = {
-    color: "red"
-  }
+import { Link } from 'react-router';
 
-
-const NavBar = React.createClass({
+const TopNavBar = React.createClass({
   render() {
     return (
       <div>
-      	<ul style={styles.container}>
-          <li>Home | </li>
-          <li>&nbsp; HH&I | </li>
-          <li>&nbsp; Episodes </li>
+      	<ul className='top-nav-bar'>
+          <Link to='/'><li>Home |</li></Link>
+          <Link to='/hhandi'><li>HH&I |</li></Link>
+          <Link to='/episodes'><li>Episodes</li></Link>
       	</ul>
       </div>
     );
   }
 });
 
-const NavSocial = React.createClass({
+const TopNavSocial = React.createClass({
   render() {
     return (
       <div>
-        <ul style={styles.container}>
+        <ul className='top-nav-social'>
           <li><a href='#'><i className='fa fa-facebook-square fa-3x' aria-hidden='true'></i></a></li>
           <li><a href='#'><i className='fa fa-twitter fa-3x' aria-hidden='true'></i></a></li>
           <li><a href='#'><i className='fa fa-youtube fa-3x' aria-hidden='true'></i></a></li>
@@ -34,4 +31,4 @@ const NavSocial = React.createClass({
 });
 
 
-module.exports = {NavBar, NavSocial};
+module.exports = {TopNavBar, TopNavSocial};
