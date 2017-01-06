@@ -3,13 +3,19 @@ import ReactRouter from 'react-router';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import Main from '../containers/Main';
 import HomeContainer from '../containers/HomeContainer';
+import HhandiContainer from '../containers/HhandiContainer';
+import Hhandi1Container from '../containers/Hhandi1Container';
 import EpisodesContainer from '../containers/EpisodesContainer';
+import Episodes1Container from '../containers/Episodes1Container';
 
 var routes = (
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
     	<IndexRoute component={HomeContainer} />
-    	<Route path="/episodes" component={EpisodesContainer}/>
+    	<Route path="/hhandi" component={HhandiContainer} />
+    	<Route path="/hhandi/hhandi1" component={Hhandi1Container} />
+    	<Route path="/episodes" component={EpisodesContainer} />
+    	<Route path="/episodes/episodes1" component={Episodes1Container} />
     </Route>
   </Router>
 );

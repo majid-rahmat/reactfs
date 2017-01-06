@@ -43,6 +43,47 @@
   padding: 15px 0;
 }
 
+/* quotebox */
+
+.content {
+  width: 230px;
+  margin: 20px 0 40px 20px;
+}
+
+.text-quotes blockquote {
+    position: relative;
+    margin: 0;
+    padding: 8px 0 22px 0;
+    text-indent: 36px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #999;
+}
+
+.text-quotes blockquote:before,
+.text-quotes blockquote:after {
+    position: absolute;
+    font-family: "Times New Roman", serif;
+    font-size: 60px;
+    line-height: 26px;
+    color: #7ad;
+}
+
+.text-quotes blockquote:before {
+    content: '\201C';   /* Left double quote */
+    left: -36px;
+    top: 8px;
+}
+
+.text-quotes blockquote:after {
+    content: '\201D';     /* Right double quote */ 
+    right: 0px;
+    bottom: -13px;
+}
+
+/* quotebox */
 
 
 

@@ -3,6 +3,7 @@ import TopNav from './TopNav';
 import Text from './Text';
 import Title from './Title';
 import Video from './Video';
+import { Link } from 'react-router';
 
 const Episodes = React.createClass({
   render() {
@@ -12,7 +13,7 @@ const Episodes = React.createClass({
         The site’s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.
         So, please, let’s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.'/>
         <hr />
-        <Title msg='Episode 1:'/>
+        <Link to='/Episodes/Episodes1'><Title msg='Episode 1:'/></Link>
         <Video src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
         <Text msg='A "rather unique" look at marketing and rap... 
             In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.

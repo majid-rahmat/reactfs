@@ -21495,9 +21495,21 @@
 
 	var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 
-	var _EpisodesContainer = __webpack_require__(246);
+	var _HhandiContainer = __webpack_require__(246);
+
+	var _HhandiContainer2 = _interopRequireDefault(_HhandiContainer);
+
+	var _Hhandi1Container = __webpack_require__(249);
+
+	var _Hhandi1Container2 = _interopRequireDefault(_Hhandi1Container);
+
+	var _EpisodesContainer = __webpack_require__(252);
 
 	var _EpisodesContainer2 = _interopRequireDefault(_EpisodesContainer);
+
+	var _Episodes1Container = __webpack_require__(255);
+
+	var _Episodes1Container2 = _interopRequireDefault(_Episodes1Container);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21508,7 +21520,10 @@
 	    _reactRouter.Route,
 	    { path: '/', component: _Main2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomeContainer2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes', component: _EpisodesContainer2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/hhandi', component: _HhandiContainer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/hhandi/hhandi1', component: _Hhandi1Container2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes', component: _EpisodesContainer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes/episodes1', component: _Episodes1Container2.default })
 	  )
 	);
 
@@ -26869,7 +26884,224 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Episodes = __webpack_require__(247);
+	var _Hhandi = __webpack_require__(247);
+
+	var _Hhandi2 = _interopRequireDefault(_Hhandi);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var HhandiContainer = _react2.default.createClass({
+	  displayName: 'HhandiContainer',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Hhandi2.default, null)
+	    );
+	  }
+	});
+
+	module.exports = HhandiContainer;
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _TableOfContents = __webpack_require__(248);
+
+	var _TableOfContents2 = _interopRequireDefault(_TableOfContents);
+
+	var _Text = __webpack_require__(243);
+
+	var _Text2 = _interopRequireDefault(_Text);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Hhandi = _react2.default.createClass({
+	  displayName: 'Hhandi',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_TableOfContents2.default, null),
+	      _react2.default.createElement(_Text2.default, { msg: 'Rhythm And Poetry; that\u2019s what rap literally and figuratively stands for. \r The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.\r Click here to continue reading!' }),
+	      _react2.default.createElement(_Text2.default, { msg: 'About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' })
+	    );
+	  }
+	});
+
+	module.exports = Hhandi;
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var TableOfContents = _react2.default.createClass({
+	  displayName: 'TableOfContents',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'ul',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          'Table of Contents'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/hhandi/hhandi1' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Why Rap 1'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          'Why Rap 2'
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = TableOfContents;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Hhandi = __webpack_require__(250);
+
+	var _Hhandi2 = _interopRequireDefault(_Hhandi);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Hhandi1Container = _react2.default.createClass({
+	  displayName: 'Hhandi1Container',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Hhandi2.default, null)
+	    );
+	  }
+	});
+
+	module.exports = Hhandi1Container;
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Quotebox = __webpack_require__(251);
+
+	var _Quotebox2 = _interopRequireDefault(_Quotebox);
+
+	var _Video = __webpack_require__(244);
+
+	var _Video2 = _interopRequireDefault(_Video);
+
+	var _Text = __webpack_require__(243);
+
+	var _Text2 = _interopRequireDefault(_Text);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Hhandi1 = _react2.default.createClass({
+	  displayName: 'Hhandi1',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.' }),
+	      _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	      _react2.default.createElement(_Text2.default, { msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
+	      _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' }),
+	      _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
+	      _react2.default.createElement(_Text2.default, { msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	    );
+	  }
+	});
+
+	module.exports = Hhandi1;
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Quotebox = _react2.default.createClass({
+	  displayName: "Quotebox",
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      _react2.default.createElement(
+	        "div",
+	        { className: "content text-quotes" },
+	        _react2.default.createElement(
+	          "blockquote",
+	          null,
+	          this.props.quote
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Quotebox;
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Episodes = __webpack_require__(253);
 
 	var _Episodes2 = _interopRequireDefault(_Episodes);
 
@@ -26889,7 +27121,7 @@
 	module.exports = EpisodesContainer;
 
 /***/ },
-/* 247 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26906,13 +27138,15 @@
 
 	var _Text2 = _interopRequireDefault(_Text);
 
-	var _Title = __webpack_require__(248);
+	var _Title = __webpack_require__(254);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
 	var _Video = __webpack_require__(244);
 
 	var _Video2 = _interopRequireDefault(_Video);
+
+	var _reactRouter = __webpack_require__(179);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26924,7 +27158,11 @@
 	      null,
 	      _react2.default.createElement(_Text2.default, { msg: 'Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all \u2013 from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.\r So, please, let\u2019s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.' }),
 	      _react2.default.createElement('hr', null),
-	      _react2.default.createElement(_Title2.default, { msg: 'Episode 1:' }),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/Episodes/Episodes1' },
+	        _react2.default.createElement(_Title2.default, { msg: 'Episode 1:' })
+	      ),
 	      _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
 	      _react2.default.createElement(_Text2.default, { msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
 	      _react2.default.createElement('hr', null),
@@ -26938,7 +27176,7 @@
 	module.exports = Episodes;
 
 /***/ },
-/* 248 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26965,6 +27203,74 @@
 	});
 
 	module.exports = Title;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Episodes = __webpack_require__(256);
+
+	var _Episodes2 = _interopRequireDefault(_Episodes);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Episodes1Container = _react2.default.createClass({
+	  displayName: 'Episodes1Container',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Episodes2.default, null)
+	    );
+	  }
+	});
+
+	module.exports = Episodes1Container;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Video = __webpack_require__(244);
+
+	var _Video2 = _interopRequireDefault(_Video);
+
+	var _Title = __webpack_require__(254);
+
+	var _Title2 = _interopRequireDefault(_Title);
+
+	var _Text = __webpack_require__(243);
+
+	var _Text2 = _interopRequireDefault(_Text);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Episodes1 = _react2.default.createClass({
+	  displayName: 'Episodes1',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	      _react2.default.createElement(_Title2.default, { msg: 'Episode 1 Transcript' }),
+	      _react2.default.createElement(_Text2.default, { msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
+	    );
+	  }
+	});
+
+	module.exports = Episodes1;
 
 /***/ }
 /******/ ]);
