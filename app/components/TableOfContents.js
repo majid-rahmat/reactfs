@@ -5,7 +5,7 @@ const TableOfContents = React.createClass ({
     render(){
     return (
     	<div>
-            <ul>
+            <ul className={this.props.customClass}>
               <li>Table of Contents</li> 
               <Link to='/hhandi/hhandi1'><li>Why Rap 1</li></Link>
               <li>Why Rap 2</li>

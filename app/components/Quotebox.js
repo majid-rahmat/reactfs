@@ -5,7 +5,7 @@ const Quotebox = React.createClass ({
     return (
        <div>
        		<div className="content text-quotes">
-    		<blockquote>{this.props.quote}</blockquote>
+    			<blockquote>{this.props.quote}</blockquote>
     		</div>
 		</div>  
     );

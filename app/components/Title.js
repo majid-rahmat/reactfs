@@ -4,7 +4,7 @@ const Title = React.createClass({
   render() {
     return (
     	<div>
-    		<h1>{this.props.msg}</h1>
+    		<h1 className={this.props.customClass}>{this.props.msg}</h1>
     	</div>  
     );
   }

@@ -4,7 +4,7 @@ const Image = React.createClass({
   render() {
     return (
       <div>
-        <img src={this.props.src} /> 
+        <img className={this.props.customClass} src={this.props.src} /> 
       </div>
     );
   }

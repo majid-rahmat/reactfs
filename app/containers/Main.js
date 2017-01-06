@@ -7,7 +7,6 @@ const Main = React.createClass({
     return (
       <div>
         <TopNavContainer />
-        <hr />
         {this.props.children}
         <FooterContainer />
       </div>

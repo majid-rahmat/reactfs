@@ -2,13 +2,30 @@
 	box-sizing: border-box;
 }
 
+/* --- TopNav.js - Start --- */
+
+.top-nav {
+  border-bottom: thick solid #ff0000;
+}
+
 .top-logo {
 	display: inline-block;
 	margin-left: 5em;
 }
 
-.top-logo, .top-nav-bar {
+.top-logo {
 	float: left;
+}
+
+.top-slogan {
+  display: inline-block;
+  margin-left: -9em;
+}
+
+/* --- TopNavLists.js - Start --- */
+
+.top-nav-bar {
+  float: left;
 }
 
 .top-nav-bar, .top-nav-social {
@@ -25,11 +42,6 @@
 	margin-left: 20em;
 }
 
-.top-slogan {
-	display: inline-block;
-	margin-left: -9em;
-}
-
 .bottom-bar {
   background: #191919;
   color: #fff;
@@ -43,11 +55,158 @@
   padding: 15px 0;
 }
 
-/* quotebox */
+/* --- Home.js - Start --- */
+
+.home-header-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.header-container {
+    display: inline-block;
+    width: 350px;
+    margin-right: 0px;
+}
+
+.header-container img {
+    width: 350px;
+    margin-left: 11em;
+}
+
+.home-text-vid {
+    display: inline-block;
+    width: 800px;
+    vertical-align: top;
+    margin-left:13em;
+}
+
+.home-text-vid .paragraph {
+    text-align: justify;
+}
+
+.home-header-text-vid {
+    width: 395px;
+    height: 175px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 10px;
+}
+
+.home-header-vid {
+    width: 395px;
+    height: 175px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.home-header-text-top {
+  border: 1px solid black;
+  padding: 1.5em;
+}
+
+.home-slideshow {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+/* --- Hhandi.js - Start --- */
+.table-of-contents {
+  display: inline-block;
+  border: 2px solid #000;
+  list-style: none;
+  margin-left: 11em;
+  float: left;
+  margin-top: 0em;
+  height: 15em;
+  width: 12em;
+}
+
+.hhandi-top-text, .hhandi-about-author {
+  border: 2px solid #000;
+  margin-left: 23em;
+  margin-right: 11em;
+  height: 7em;
+}
+
+.hhandi-about-author {
+  margin-top: 1em;
+}
+
+.hhandi-text-container {
+  margin-left: 2em;
+}
+
+.hhandi-wrapper {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* --- Episodes.js - Start --- */
+
+.episodes-text-top {
+  border: 2px solid #000;  
+  margin-left: 11em;
+  margin-right: 11em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.episodes-title {
+  margin-left: 5.5em;
+}
+
+.episodes-vid {
+  margin-left: 11em;
+  float: left;
+}
+
+.episodes-des {
+  border: 2px solid #000;
+  margin-right: 11em;
+  margin-left: 50em;
+  height: 20em;
+  margin-bottom: 2em; 
+}
+
+.episodes-header {
+  margin-left: 11em;
+  margin-right: 11em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* --- Episodes1.js - Start --- */
+.episode-vid {
+  margin-top: 2em;
+  margin-left: 30em;
+}
+
+.episode-title {
+  margin-top: 2em;
+  margin-left: 19em;
+}
+
+.episode-text {
+  margin-left:11em;
+  margin:right:11em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* --- Hhandi1.js - Start --- */
+/* --- Quotebox.js - Start --- */
 
 .content {
-  width: 230px;
-  margin: 20px 0 40px 20px;
+  width: 15em;
+  margin: 0 auto;
+  margin-top: 2em;
 }
 
 .text-quotes blockquote {
@@ -83,8 +242,17 @@
     bottom: -13px;
 }
 
-/* quotebox */
+.hhandi1-vid {
+  margin-top: 2em;
+  margin-left: 30em;
+}
 
+.hhandi1-text {
+  margin-left:11em;
+  margin-right:11em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
 
 /* --- NAV - Start --- */

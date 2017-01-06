@@ -4,7 +4,7 @@ const Text = React.createClass({
   render() {
     return (
       <div>
-        <div>{this.props.msg}</div> 
+        <div className={this.props.customClass}>{this.props.msg}</div> 
       </div>
     );
   }
