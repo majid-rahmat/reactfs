@@ -1,14 +1,12 @@
 import React from 'react';
 import TopNav from '../components/TopNav';
 
-const TopNavContainer = React.createClass({
-  render() {
-    return (
-      <div>
-        <TopNav />    
-      </div>
-    );
-  }
-});
+function TopNavContainer (props) {
+  	return (
+		<div>
+        	<TopNav />    
+      	</div>
+	);
+};
 
-module.exports = TopNavContainer;
+export default TopNavContainer;

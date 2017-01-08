@@ -1,16 +1,13 @@
 import React from 'react';
 
-const Quotebox = React.createClass ({
-    render(){
-    return (
-       <div>
-       		<div className="content text-quotes">
-    			<blockquote>{this.props.quote}</blockquote>
-    		</div>
-		</div>  
-    );
-  }
-});
+class Quotebox extends React.Component{
+	render(){
+		return(
+		<div>
+    		<blockquote>{this.props.quote}</blockquote>
+  		</div>  
+		);
+	}
+};
 
-
-module.exports = Quotebox;
+export default Quotebox;

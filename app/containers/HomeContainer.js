@@ -1,14 +1,12 @@
 import React from 'react';
 import Home from '../components/Home';
 
-const HomeContainer = React.createClass({
-  render() {
-    return (
-      <div>
-        <Home />
-      </div>
-    );
-  }
-});
+function HomeContainer (props) {
+  	return (
+		<div>
+        	<Home />
+      	</div>
+  	);
+};
 
-module.exports = HomeContainer;
+export default HomeContainer;

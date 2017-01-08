@@ -1,14 +1,12 @@
 import React from 'react';
 import Footer from '../components/Footer';
 
-const FooterContainer = React.createClass({
-  render() {
-    return (
-      <div>
-        <Footer close='To Educate. To Entertain. To Inspire.' />    
-      </div>
-    );
-  }
-});
+function FooterContainer (props) {
+  	return (
+		<div>
+        	<Footer />
+      	</div>
+  	);
+};
 
-module.exports = FooterContainer;
+export default FooterContainer;

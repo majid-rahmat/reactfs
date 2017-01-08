@@ -1,18 +1,18 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-const TableOfContents = React.createClass ({
-    render(){
+class TableOfContents extends React.Component{
+  render(){
     return (
-    	<div>
+      <div>
             <ul className={this.props.customClass}>
               <li>Table of Contents</li> 
               <Link to='/hhandi/hhandi1'><li>Why Rap 1</li></Link>
               <li>Why Rap 2</li>
             </ul>
-    	</div>      
+      </div>
     );
   }
-});
+};
 
-module.exports = TableOfContents
+export default TableOfContents;

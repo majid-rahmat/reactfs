@@ -1,14 +1,12 @@
 import React from 'react';
 import Episodes from '../components/Episodes';
 
-const EpisodesContainer = React.createClass({
-  render() {
-    return (
-      <div>
-        <Episodes />
-      </div>
-    );
-  }
-});
+function EpisodesContainer (props) {
+  	return (
+		<div>
+        	<Episodes />
+      	</div>
+  	);
+};
 
-module.exports = EpisodesContainer;
+export default EpisodesContainer;

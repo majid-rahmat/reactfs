@@ -1,13 +1,18 @@
 import React from 'react';
+import FooterComponent from './FooterComponent';
 
-const Footer = React.createClass ({
-    render(){
-    return (
-    	<div>
-    		<div className='bottom-bar'>{this.props.close}</div>
-    	</div>      
-    );
-  }
-});
+class Footer extends React.Component{
+    render (){
+        return(
+            <div>
+            
+            <div className='bottom-bar'>
+                <FooterComponent close='To Educate. To Entertain. To Inspire.' />
+            </div>
+        
+        </div> 
+        );
+    }
+};
 
-export default Footer
+export default Footer;

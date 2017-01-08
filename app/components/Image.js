@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Image = React.createClass({
-  render() {
-    return (
-      <div>
-        <img className={this.props.customClass} src={this.props.src} /> 
-      </div>
-    );
-  }
-});
+class Image extends React.Component{
+	render(){
+		return(
+		<div>
+        	<img className={this.props.customClass} src={this.props.src} /> 
+      	</div>
+		);
+	}
+};
 
-module.exports = Image;
+export default Image;

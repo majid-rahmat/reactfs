@@ -4,16 +4,16 @@ import Title from './Title';
 import Video from './Video';
 import { Link } from 'react-router';
 
-const Episodes = React.createClass({
-  render() {
-    return (
-      <div>
+class Episodes extends React.Component{
+    render(){
+        return (
+            <div>
         <div className='episodes-wrapper'>
             
             <div className='episodes-header'>
                 <Text msg='Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all – from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!
-            The site’s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.
-            So, please, let’s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.'/>
+                The site’s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.
+                So, please, let’s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.'/>
             </div>
             
             <div className='episode'>
@@ -36,11 +36,10 @@ const Episodes = React.createClass({
                     Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' />
                 </div>
             </div>
-        
         </div>
-        </div>
+    </div>
     );
-  }
-});
+}
+};
 
-module.exports = Episodes;
+export default Episodes;

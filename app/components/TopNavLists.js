@@ -1,25 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const TopNavBar = React.createClass({
-  render() {
-    return (
+class TopNavBar extends React.Component {
+  render(){
+    return(
       <div>
-      	<ul className='top-nav-bar'>
+        <ul className={this.props.customClass}>
           <Link to='/'><li>Home |</li></Link>
           <Link to='/hhandi'><li>HH&I |</li></Link>
           <Link to='/episodes'><li>Episodes</li></Link>
-      	</ul>
+        </ul>
       </div>
     );
   }
-});
+};
 
-const TopNavSocial = React.createClass({
-  render() {
-    return (
+class TopNavSocial extends React.Component {
+  render(){
+    return(
       <div>
-        <ul className='top-nav-social'>
+        <ul className={this.props.customClass}>
           <li><a href='#'><i className='fa fa-facebook-square fa-3x' aria-hidden='true'></i></a></li>
           <li><a href='#'><i className='fa fa-twitter fa-3x' aria-hidden='true'></i></a></li>
           <li><a href='#'><i className='fa fa-youtube fa-3x' aria-hidden='true'></i></a></li>
@@ -28,7 +28,7 @@ const TopNavSocial = React.createClass({
       </div>
     );
   }
-});
-
+};
 
 module.exports = {TopNavBar, TopNavSocial};
+// export default { TopNavBar, TopNavSocial}

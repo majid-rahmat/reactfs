@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Video = React.createClass({
-  render() {
-    return (
-    <div>
-    	<iframe className={this.props.customClass} src={this.props.src} width={this.props.width} height={this.props.height} frameBorder="0" allowFullScreen></iframe>
-    </div>  
-    );
-  }
-});
+class Video extends React.Component{
+	render(){
+		return(
+		<div>
+    		<iframe className={this.props.customClass} src={this.props.src} width={this.props.width} height={this.props.height} frameBorder="0" allowFullScreen></iframe>
+    	</div> 
+		);
+	}
+};
 
-module.exports = Video;
+export default Video;
