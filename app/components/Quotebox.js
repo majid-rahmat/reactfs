@@ -1,13 +1,11 @@
 import React from 'react';
 
-class Quotebox extends React.Component{
-	render(){
-		return(
+function Quotebox(props) {
+  	return(
 		<div>
-    		<blockquote>{this.props.quote}</blockquote>
+    		<blockquote>{props.quote}</blockquote>
   		</div>  
-		);
-	}
+	);
 };
 
 export default Quotebox;

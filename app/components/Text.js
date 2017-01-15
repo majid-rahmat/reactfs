@@ -1,13 +1,11 @@
 import React from 'react';
 
-class Text extends React.Component {
-	render (){
-		return (
-      		<div>
-        		<div className={this.props.customClass}>{this.props.msg}</div> 
-      		</div>
-    	);	
-	}
+function Text(props) {
+  	return (
+	<div>
+		<div className={props.customClass}>{props.msg}</div> 
+	</div>
+    );
 };
 
 export default Text;

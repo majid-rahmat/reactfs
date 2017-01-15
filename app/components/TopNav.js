@@ -1,8 +1,7 @@
 import React from 'react';
 import {TopNavBar,TopNavSocial} from '../components/TopNavLists';
 
-class TopNav extends React.Component{
-  render (){
+function TopNav(props) {
     return(
       <div>
         
@@ -15,7 +14,6 @@ class TopNav extends React.Component{
       
       </div>
     );
-  }
 };
 
 export default TopNav;

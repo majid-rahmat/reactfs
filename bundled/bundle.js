@@ -21499,19 +21499,19 @@
 
 	var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 
-	var _HhandiContainer = __webpack_require__(247);
+	var _HhandiContainer = __webpack_require__(248);
 
 	var _HhandiContainer2 = _interopRequireDefault(_HhandiContainer);
 
-	var _Hhandi1Container = __webpack_require__(250);
+	var _Hhandi1Container = __webpack_require__(251);
 
 	var _Hhandi1Container2 = _interopRequireDefault(_Hhandi1Container);
 
-	var _EpisodesContainer = __webpack_require__(254);
+	var _EpisodesContainer = __webpack_require__(255);
 
 	var _EpisodesContainer2 = _interopRequireDefault(_EpisodesContainer);
 
-	var _Episodes1Container = __webpack_require__(256);
+	var _Episodes1Container = __webpack_require__(257);
 
 	var _Episodes1Container2 = _interopRequireDefault(_Episodes1Container);
 
@@ -26472,10 +26472,11 @@
 	  );
 	}
 
+	exports.default = Main;
+
 	// Main.propTypes={
 	// 	children: React.PropTypes. .isRequired
 	// };
-	exports.default = Main;
 
 /***/ },
 /* 235 */
@@ -26517,8 +26518,6 @@
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -26527,51 +26526,28 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TopNav = function (_React$Component) {
-	  _inherits(TopNav, _React$Component);
-
-	  function TopNav() {
-	    _classCallCheck(this, TopNav);
-
-	    return _possibleConstructorReturn(this, (TopNav.__proto__ || Object.getPrototypeOf(TopNav)).apply(this, arguments));
-	  }
-
-	  _createClass(TopNav, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'top-nav' },
-	          _react2.default.createElement(
-	            'h1',
-	            { className: 'top-logo' },
-	            'Blogological'
-	          ),
-	          _react2.default.createElement(_TopNavLists.TopNavBar, { customClass: 'top-nav-bar' }),
-	          _react2.default.createElement(_TopNavLists.TopNavSocial, { customClass: 'top-nav-social' }),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'top-slogan' },
-	            'Hip Hop 4 Better Dayz'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return TopNav;
-	}(_react2.default.Component);
-
-	;
+	function TopNav(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'top-nav' },
+	      _react2.default.createElement(
+	        'h1',
+	        { className: 'top-logo' },
+	        'Blogological'
+	      ),
+	      _react2.default.createElement(_TopNavLists.TopNavBar, { customClass: 'top-nav-bar' }),
+	      _react2.default.createElement(_TopNavLists.TopNavSocial, { customClass: 'top-nav-social' }),
+	      _react2.default.createElement(
+	        'p',
+	        { className: 'top-slogan' },
+	        'Hip Hop 4 Better Dayz'
+	      )
+	    )
+	  );
+	};
 
 	exports.default = TopNav;
 
@@ -26581,8 +26557,6 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -26591,133 +26565,92 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function TopNavBar(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'ul',
+	      { className: props.customClass },
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/' },
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          'Home |'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/hhandi' },
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          'HH&I |'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/episodes' },
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          'Episodes'
+	        )
+	      )
+	    )
+	  );
+	};
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TopNavBar = function (_React$Component) {
-	  _inherits(TopNavBar, _React$Component);
-
-	  function TopNavBar() {
-	    _classCallCheck(this, TopNavBar);
-
-	    return _possibleConstructorReturn(this, (TopNavBar.__proto__ || Object.getPrototypeOf(TopNavBar)).apply(this, arguments));
-	  }
-
-	  _createClass(TopNavBar, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
+	function TopNavSocial(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'ul',
+	      { className: props.customClass },
+	      _react2.default.createElement(
+	        'li',
 	        null,
 	        _react2.default.createElement(
-	          'ul',
-	          { className: this.props.customClass },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Home |'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/hhandi' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'HH&I |'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/episodes' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Episodes'
-	            )
-	          )
+	          'a',
+	          { href: '#' },
+	          _react2.default.createElement('i', { className: 'fa fa-facebook-square fa-3x', 'aria-hidden': 'true' })
 	        )
-	      );
-	    }
-	  }]);
-
-	  return TopNavBar;
-	}(_react2.default.Component);
-
-	;
-
-	var TopNavSocial = function (_React$Component2) {
-	  _inherits(TopNavSocial, _React$Component2);
-
-	  function TopNavSocial() {
-	    _classCallCheck(this, TopNavSocial);
-
-	    return _possibleConstructorReturn(this, (TopNavSocial.__proto__ || Object.getPrototypeOf(TopNavSocial)).apply(this, arguments));
-	  }
-
-	  _createClass(TopNavSocial, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
+	      ),
+	      _react2.default.createElement(
+	        'li',
 	        null,
 	        _react2.default.createElement(
-	          'ul',
-	          { className: this.props.customClass },
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              _react2.default.createElement('i', { className: 'fa fa-facebook-square fa-3x', 'aria-hidden': 'true' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              _react2.default.createElement('i', { className: 'fa fa-twitter fa-3x', 'aria-hidden': 'true' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              _react2.default.createElement('i', { className: 'fa fa-youtube fa-3x', 'aria-hidden': 'true' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              _react2.default.createElement('i', { className: 'fa fa-instagram fa-3x', 'aria-hidden': 'true' })
-	            )
-	          )
+	          'a',
+	          { href: '#' },
+	          _react2.default.createElement('i', { className: 'fa fa-twitter fa-3x', 'aria-hidden': 'true' })
 	        )
-	      );
-	    }
-	  }]);
-
-	  return TopNavSocial;
-	}(_react2.default.Component);
-
-	;
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#' },
+	          _react2.default.createElement('i', { className: 'fa fa-youtube fa-3x', 'aria-hidden': 'true' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#' },
+	          _react2.default.createElement('i', { className: 'fa fa-instagram fa-3x', 'aria-hidden': 'true' })
+	        )
+	      )
+	    )
+	  );
+	};
 
 	module.exports = { TopNavBar: TopNavBar, TopNavSocial: TopNavSocial };
-	// export default { TopNavBar, TopNavSocial}
 
 /***/ },
 /* 238 */
@@ -26759,8 +26692,6 @@
 	    value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -26771,42 +26702,33 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Footer = function (_React$Component) {
-	    _inherits(Footer, _React$Component);
-
-	    function Footer() {
-	        _classCallCheck(this, Footer);
-
-	        return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-	    }
-
-	    _createClass(Footer, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'bottom-bar' },
-	                    _react2.default.createElement(_FooterComponent2.default, { close: 'To Educate. To Entertain. To Inspire.' })
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Footer;
-	}(_react2.default.Component);
-
-	;
+	function Footer(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'bottom-bar' },
+	            _react2.default.createElement(_FooterComponent2.default, { close: 'To Educate. To Entertain. To Inspire.' })
+	        )
+	    );
+	};
 
 	exports.default = Footer;
+
+	// class Footer extends React.Component{
+	//     render (){
+	//         return(
+	//             <div>
+
+	//             <div className='bottom-bar'>
+	//                 <FooterComponent close='To Educate. To Entertain. To Inspire.' />
+	//             </div>
+
+	//         </div> 
+	//         );
+	//     }
+	// };
 
 /***/ },
 /* 240 */
@@ -26815,10 +26737,8 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -26826,38 +26746,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var FooterComponent = function (_React$Component) {
-		_inherits(FooterComponent, _React$Component);
-
-		function FooterComponent() {
-			_classCallCheck(this, FooterComponent);
-
-			return _possibleConstructorReturn(this, (FooterComponent.__proto__ || Object.getPrototypeOf(FooterComponent)).apply(this, arguments));
-		}
-
-		_createClass(FooterComponent, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					this.props.close
-				);
-			}
-		}]);
-
-		return FooterComponent;
-	}(_react2.default.Component);
-
-	;
+	function FooterComponent(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    props.close
+	  );
+	};
 
 	exports.default = FooterComponent;
+
+	// class FooterComponent extends React.Component{
+	// 	render(){
+	// 		return(
+	// 		<div>
+	//     		{this.props.close}
+	//     	</div> 
+	// 		);
+	// 	}
+	// };
 
 /***/ },
 /* 241 */
@@ -26899,8 +26806,6 @@
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -26921,65 +26826,84 @@
 
 	var _Slideshow2 = _interopRequireDefault(_Slideshow);
 
+	var _SlideshowContainer = __webpack_require__(247);
+
+	var _SlideshowContainer2 = _interopRequireDefault(_SlideshowContainer);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Home = function (_React$Component) {
-	  _inherits(Home, _React$Component);
-
-	  function Home() {
-	    _classCallCheck(this, Home);
-
-	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
-	  }
-
-	  _createClass(Home, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
+	function Home(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'home-header-container' },
+	      _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'header-container' },
+	        _react2.default.createElement(_Image2.default, { customClass: 'home-header-image', src: '/app/public/images/IHeartRap.jpg' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'home-text-vid' },
+	        _react2.default.createElement(_Text2.default, { customClass: 'home-header-text-top', msg: 'This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all \u2014 from the battle-hardened hip hop head to the soon-to-be-Stan\u2014 and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. \r Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.\r Click here for more.' }),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'home-header-container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'header-container' },
-	            _react2.default.createElement(_Image2.default, { customClass: 'home-header-image', src: '/app/public/images/IHeartRap.jpg' })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'home-text-vid' },
-	            _react2.default.createElement(_Text2.default, { customClass: 'home-header-text-top', msg: 'This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all \u2014 from the battle-hardened hip hop head to the soon-to-be-Stan\u2014 and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. \r Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.\r Click here for more.' }),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'home-header-video-container' },
-	              _react2.default.createElement(_Text2.default, { customClass: 'home-header-text-vid', msg: 'Press play for a look at pop culture\xA0through marketing, branding and business strategy (or is it the other way round?!)\r Click here for more episodes' }),
-	              _react2.default.createElement(_Video2.default, { customClass: 'home-header-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' })
-	            )
-	          )
-	        ),
-	        _react2.default.createElement('hr', null),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'home-bottom-half' },
-	          _react2.default.createElement(_Slideshow2.default, { customClass: 'home-slideshow', src: '/app/public/images/illmatic.jpg' })
+	          { className: 'home-header-video-container' },
+	          _react2.default.createElement(_Text2.default, { customClass: 'home-header-text-vid', msg: 'Press play for a look at pop culture\xA0through marketing, branding and business strategy (or is it the other way round?!)\r Click here for more episodes' }),
+	          _react2.default.createElement(_Video2.default, { customClass: 'home-header-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' })
 	        )
-	      );
-	    }
-	  }]);
-
-	  return Home;
-	}(_react2.default.Component);
-
-	;
+	      )
+	    ),
+	    _react2.default.createElement('hr', null),
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'home-slideshow' },
+	      _react2.default.createElement(_SlideshowContainer2.default, null)
+	    )
+	  );
+	};
 
 	exports.default = Home;
+
+	// class Home extends React.Component{
+	//   render(){
+	//     return(
+	//       <div>
+
+	//           <div className='home-header-container'>
+
+	//             <div className='header-container'>
+	//               <Image customClass='home-header-image' src='/app/public/images/IHeartRap.jpg' /> 
+	//             </div>
+
+	//             <div className='home-text-vid'>
+	//               <Text customClass='home-header-text-top' msg='This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all — from the battle-hardened hip hop head to the soon-to-be-Stan— and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!
+	//               The site’s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. 
+	//               Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.
+	//               Click here for more.' />
+
+	//               <div className='home-header-video-container'>
+	//                 <Text customClass='home-header-text-vid' msg='Press play for a look at pop culture through marketing, branding and business strategy (or is it the other way round?!)
+	//                 Click here for more episodes' />
+	//                 <Video customClass='home-header-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
+	//               </div>
+	//             </div>
+	//           </div>
+
+	//           <hr />
+
+	//           <div className='home-slideshow'>
+	//             <SlideshowContainer />
+	//           </div>
+
+	//       </div>
+	//     );
+	//   }
+	// };
+
+	// export default Home;
 
 /***/ },
 /* 243 */
@@ -26988,10 +26912,8 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -26999,36 +26921,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Image = function (_React$Component) {
-		_inherits(Image, _React$Component);
-
-		function Image() {
-			_classCallCheck(this, Image);
-
-			return _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).apply(this, arguments));
-		}
-
-		_createClass(Image, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement('img', { className: this.props.customClass, src: this.props.src })
-				);
-			}
-		}]);
-
-		return Image;
-	}(_react2.default.Component);
-
-	;
+	function Image(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement('img', { className: props.customClass, src: props.src })
+	  );
+	};
 
 	exports.default = Image;
 
@@ -27039,10 +26938,8 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -27050,40 +26947,17 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Text = function (_React$Component) {
-	  _inherits(Text, _React$Component);
-
-	  function Text() {
-	    _classCallCheck(this, Text);
-
-	    return _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).apply(this, arguments));
-	  }
-
-	  _createClass(Text, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: this.props.customClass },
-	          this.props.msg
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Text;
-	}(_react2.default.Component);
-
-	;
+	function Text(props) {
+		return _react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement(
+				'div',
+				{ className: props.customClass },
+				props.msg
+			)
+		);
+	};
 
 	exports.default = Text;
 
@@ -27094,10 +26968,8 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -27105,36 +26977,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Video = function (_React$Component) {
-		_inherits(Video, _React$Component);
-
-		function Video() {
-			_classCallCheck(this, Video);
-
-			return _possibleConstructorReturn(this, (Video.__proto__ || Object.getPrototypeOf(Video)).apply(this, arguments));
-		}
-
-		_createClass(Video, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"div",
-					null,
-					_react2.default.createElement("iframe", { className: this.props.customClass, src: this.props.src, width: this.props.width, height: this.props.height, frameBorder: "0", allowFullScreen: true })
-				);
-			}
-		}]);
-
-		return Video;
-	}(_react2.default.Component);
-
-	;
+	function Video(props) {
+	  return _react2.default.createElement(
+	    "div",
+	    null,
+	    _react2.default.createElement("iframe", { className: props.customClass, src: props.src, width: props.width, height: props.height, frameBorder: "0", allowFullScreen: true })
+	  );
+	};
 
 	exports.default = Video;
 
@@ -27148,49 +26997,81 @@
 		value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Slideshow = function (_React$Component) {
-		_inherits(Slideshow, _React$Component);
-
-		function Slideshow() {
-			_classCallCheck(this, Slideshow);
-
-			return _possibleConstructorReturn(this, (Slideshow.__proto__ || Object.getPrototypeOf(Slideshow)).apply(this, arguments));
-		}
-
-		_createClass(Slideshow, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement('img', { className: this.props.customClass, src: this.props.src })
-				);
-			}
-		}]);
-
-		return Slideshow;
-	}(_react2.default.Component);
-
-	;
+	function Slideshow(props) {
+		var src = props.src;
+		return _react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement(
+				'h1',
+				null,
+				'\uD83C\uDFA4 The GOATs \uD83D\uDC10'
+			),
+			_react2.default.createElement('img', { src: src })
+		);
+	};
 
 	exports.default = Slideshow;
 
 /***/ },
 /* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Slideshow = __webpack_require__(246);
+
+	var _Slideshow2 = _interopRequireDefault(_Slideshow);
+
+	var _Albums = __webpack_require__(260);
+
+	var _Albums2 = _interopRequireDefault(_Albums);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SlideshowContainer = _react2.default.createClass({
+	  displayName: 'SlideshowContainer',
+
+	  getInitialState: function getInitialState() {
+	    return { currentAlbum: 0 };
+	  },
+
+	  nextAlbum: function nextAlbum() {
+	    var current = this.state.currentAlbum;
+	    var next = ++current % _Albums2.default.length;
+	    this.setState({ currentAlbum: next });
+	  },
+
+	  interval: null,
+
+	  componentDidMount: function componentDidMount() {
+	    this.interval = setInterval(this.nextAlbum, 2000);
+	  },
+
+	  componentWillUnmount: function componentWillUnmount() {
+	    clearInterval(this.interval);
+	  },
+
+	  render: function render() {
+	    var src = _Albums2.default[this.state.currentAlbum];
+	    return _react2.default.createElement(_Slideshow2.default, { src: src });
+	  }
+	});
+
+	module.exports = SlideshowContainer;
+
+/***/ },
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27203,7 +27084,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Hhandi = __webpack_require__(248);
+	var _Hhandi = __webpack_require__(249);
 
 	var _Hhandi2 = _interopRequireDefault(_Hhandi);
 
@@ -27220,7 +27101,7 @@
 	exports.default = HhandiContainer;
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27229,13 +27110,11 @@
 	    value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TableOfContents = __webpack_require__(249);
+	var _TableOfContents = __webpack_require__(250);
 
 	var _TableOfContents2 = _interopRequireDefault(_TableOfContents);
 
@@ -27245,119 +27124,39 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Hhandi = function (_React$Component) {
-	    _inherits(Hhandi, _React$Component);
-
-	    function Hhandi() {
-	        _classCallCheck(this, Hhandi);
-
-	        return _possibleConstructorReturn(this, (Hhandi.__proto__ || Object.getPrototypeOf(Hhandi)).apply(this, arguments));
-	    }
-
-	    _createClass(Hhandi, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'hhandi-wrapper' },
-	                    _react2.default.createElement(_TableOfContents2.default, { customClass: 'table-of-contents' }),
-	                    _react2.default.createElement(_Text2.default, { customClass: 'hhandi-top-text', msg: 'Rhythm And Poetry; that\u2019s what rap literally and figuratively stands for. \r The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.\r Click here to continue reading!' }),
-	                    _react2.default.createElement(_Text2.default, { customClass: 'hhandi-about-author', msg: 'About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' })
-	                )
-	            );
-	        }
-	    }]);
-
-	    return Hhandi;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = Hhandi;
-
-/***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(179);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TableOfContents = function (_React$Component) {
-	  _inherits(TableOfContents, _React$Component);
-
-	  function TableOfContents() {
-	    _classCallCheck(this, TableOfContents);
-
-	    return _possibleConstructorReturn(this, (TableOfContents.__proto__ || Object.getPrototypeOf(TableOfContents)).apply(this, arguments));
-	  }
-
-	  _createClass(TableOfContents, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
+	function Hhandi(props) {
+	    return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'ul',
-	          { className: this.props.customClass },
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            'Table of Contents'
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/hhandi/hhandi1' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Why Rap 1'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            'Why Rap 2'
-	          )
+	            'div',
+	            { className: 'hhandi-wrapper' },
+	            _react2.default.createElement(_TableOfContents2.default, { customClass: 'table-of-contents' }),
+	            _react2.default.createElement(_Text2.default, { customClass: 'hhandi-top-text', msg: 'Rhythm And Poetry; that\u2019s what rap literally and figuratively stands for. \r The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.\r Click here to continue reading!' }),
+	            _react2.default.createElement(_Text2.default, { customClass: 'hhandi-about-author', msg: 'About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' })
 	        )
-	      );
-	    }
-	  }]);
+	    );
+	};
 
-	  return TableOfContents;
-	}(_react2.default.Component);
+	exports.default = Hhandi;
 
-	;
+	// class Hhandi extends React.Component{
+	//     render (){
+	//         return (
+	//         <div>
 
-	exports.default = TableOfContents;
+	//             <div className='hhandi-wrapper'>
+	//                 <TableOfContents customClass='table-of-contents' />
+	//                 <Text customClass='hhandi-top-text' msg='Rhythm And Poetry; that’s what rap literally and figuratively stands for. 
+	//                 The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.
+	//                 Click here to continue reading!'/>
+	//                 <Text customClass='hhandi-about-author' msg='About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' />
+	//             </div>
+
+	//         </div>
+	//         );
+	//     }
+	// };
 
 /***/ },
 /* 250 */
@@ -27373,7 +27172,57 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Hhandi = __webpack_require__(251);
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function TableOfContents(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'ul',
+	      { className: props.customClass },
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        'Table of Contents'
+	      ),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/hhandi/hhandi1' },
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          'Why Rap 1'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        'Why Rap 2'
+	      )
+	    )
+	  );
+	};
+
+	exports.default = TableOfContents;
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Hhandi = __webpack_require__(252);
 
 	var _Hhandi2 = _interopRequireDefault(_Hhandi);
 
@@ -27390,7 +27239,7 @@
 	exports.default = Hhandi1Container;
 
 /***/ },
-/* 251 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27399,17 +27248,15 @@
 	    value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Title = __webpack_require__(252);
+	var _Title = __webpack_require__(253);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
-	var _Quotebox = __webpack_require__(253);
+	var _Quotebox = __webpack_require__(254);
 
 	var _Quotebox2 = _interopRequireDefault(_Quotebox);
 
@@ -27423,107 +27270,59 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Hhandi1 = function (_React$Component) {
-	    _inherits(Hhandi1, _React$Component);
-
-	    function Hhandi1() {
-	        _classCallCheck(this, Hhandi1);
-
-	        return _possibleConstructorReturn(this, (Hhandi1.__proto__ || Object.getPrototypeOf(Hhandi1)).apply(this, arguments));
-	    }
-
-	    _createClass(Hhandi1, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Why Rap 1' }),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'content text-quotes' },
-	                    _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.' })
-	                ),
-	                _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
-	                _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'content text-quotes' },
-	                    _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' })
-	                ),
-	                _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
-	                _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
-	            );
-	        }
-	    }]);
-
-	    return Hhandi1;
-	}(_react2.default.Component);
-
-	;
+	function Hhandi1(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Why Rap 1' }),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'content text-quotes' },
+	            _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.' })
+	        ),
+	        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	        _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'content text-quotes' },
+	            _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' })
+	        ),
+	        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
+	        _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	    );
+	};
 
 	exports.default = Hhandi1;
 
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
+	// class Hhandi1 extends React.Component{
+	//     render(){
+	//         return(
+	//         <div>
 
-	'use strict';
+	//             <Title customClass='episode-title' msg='Why Rap 1' />
 
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
+	//             <div className="content text-quotes">
+	//                 <Quotebox quote='Lorem ipsum dolor.' />
+	//             </div>
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	//             <Video customClass='hhandi1-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
+	//             <Text customClass='hhandi1-text' msg='A "rather unique" look at marketing and rap... 
+	//             In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.
+	//             We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' />
 
-	var _react = __webpack_require__(1);
+	//             <div className="content text-quotes">
+	//                 <Quotebox quote='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' />
+	//             </div>
 
-	var _react2 = _interopRequireDefault(_react);
+	//             <Video customClass='hhandi1-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
+	//             <Text customClass='hhandi1-text' msg='The ruler is Back!
+	//             First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. 
+	//             Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' />
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Title = function (_React$Component) {
-		_inherits(Title, _React$Component);
-
-		function Title() {
-			_classCallCheck(this, Title);
-
-			return _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).apply(this, arguments));
-		}
-
-		_createClass(Title, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h1',
-						{ className: this.props.customClass },
-						this.props.msg
-					)
-				);
-			}
-		}]);
-
-		return Title;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = Title;
+	//         </div>
+	//         );
+	//     }
+	// };
 
 /***/ },
 /* 253 */
@@ -27532,10 +27331,8 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+			value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -27543,42 +27340,19 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Quotebox = function (_React$Component) {
-		_inherits(Quotebox, _React$Component);
-
-		function Quotebox() {
-			_classCallCheck(this, Quotebox);
-
-			return _possibleConstructorReturn(this, (Quotebox.__proto__ || Object.getPrototypeOf(Quotebox)).apply(this, arguments));
-		}
-
-		_createClass(Quotebox, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
+	function Title(props) {
+			return _react2.default.createElement(
 					'div',
 					null,
 					_react2.default.createElement(
-						'blockquote',
-						null,
-						this.props.quote
+							'h1',
+							{ className: props.customClass },
+							props.msg
 					)
-				);
-			}
-		}]);
+			);
+	};
 
-		return Quotebox;
-	}(_react2.default.Component);
-
-	;
-
-	exports.default = Quotebox;
+	exports.default = Title;
 
 /***/ },
 /* 254 */
@@ -27594,7 +27368,37 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Episodes = __webpack_require__(255);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function Quotebox(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'blockquote',
+	      null,
+	      props.quote
+	    )
+	  );
+	};
+
+	exports.default = Quotebox;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Episodes = __webpack_require__(256);
 
 	var _Episodes2 = _interopRequireDefault(_Episodes);
 
@@ -27611,7 +27415,7 @@
 	exports.default = EpisodesContainer;
 
 /***/ },
-/* 255 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27619,8 +27423,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -27630,7 +27432,7 @@
 
 	var _Text2 = _interopRequireDefault(_Text);
 
-	var _Title = __webpack_require__(252);
+	var _Title = __webpack_require__(253);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
@@ -27642,75 +27444,92 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Episodes = function (_React$Component) {
-	    _inherits(Episodes, _React$Component);
-
-	    function Episodes() {
-	        _classCallCheck(this, Episodes);
-
-	        return _possibleConstructorReturn(this, (Episodes.__proto__ || Object.getPrototypeOf(Episodes)).apply(this, arguments));
-	    }
-
-	    _createClass(Episodes, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
+	function Episodes(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'episodes-wrapper' },
+	            _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'episodes-header' },
+	                _react2.default.createElement(_Text2.default, { msg: 'Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all \u2013 from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.\r So, please, let\u2019s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.' })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'episode' },
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/Episodes/Episodes1' },
+	                    _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 1:' })
+	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'episodes-wrapper' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'episodes-header' },
-	                        _react2.default.createElement(_Text2.default, { msg: 'Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all \u2013 from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.\r So, please, let\u2019s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'episode' },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: '/Episodes/Episodes1' },
-	                            _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 1:' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'episode-text-vid' },
-	                            _react2.default.createElement(_Video2.default, { customClass: 'episodes-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
-	                            _react2.default.createElement(_Text2.default, { customClass: 'episodes-des', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'episode' },
-	                        _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 2:' }),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'episode-text-vid' },
-	                            _react2.default.createElement(_Video2.default, { customClass: 'episodes-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
-	                            _react2.default.createElement(_Text2.default, { customClass: 'episodes-des', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
-	                        )
-	                    )
+	                    { className: 'episode-text-vid' },
+	                    _react2.default.createElement(_Video2.default, { customClass: 'episodes-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	                    _react2.default.createElement(_Text2.default, { customClass: 'episodes-des', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
 	                )
-	            );
-	        }
-	    }]);
-
-	    return Episodes;
-	}(_react2.default.Component);
-
-	;
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'episode' },
+	                _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 2:' }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'episode-text-vid' },
+	                    _react2.default.createElement(_Video2.default, { customClass: 'episodes-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
+	                    _react2.default.createElement(_Text2.default, { customClass: 'episodes-des', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	                )
+	            )
+	        )
+	    );
+	};
 
 	exports.default = Episodes;
 
+	// class Episodes extends React.Component{
+	//     render(){
+	//         return (
+	//         <div>
+	//         <div className='episodes-wrapper'>
+
+	//             <div className='episodes-header'>
+	//                 <Text msg='Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all – from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!
+	//                 The site’s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.
+	//                 So, please, let’s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.'/>
+	//             </div>
+
+	//             <div className='episode'>
+	//                 <Link to='/Episodes/Episodes1'><Title customClass='episodes-title' msg='Episode 1:'/></Link>
+
+	//                 <div className='episode-text-vid'>
+	//                     <Video customClass='episodes-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
+	//                     <Text customClass='episodes-des' msg='A "rather unique" look at marketing and rap... 
+	//                     In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.
+	//                     We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' />
+	//                 </div>                
+	//             </div>
+
+	//             <div className='episode'>
+	//                 <Title customClass='episodes-title' msg='Episode 2:'/>
+	//                 <div className='episode-text-vid'>
+	//                     <Video customClass='episodes-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
+	//                     <Text customClass='episodes-des' msg='The ruler is Back!
+	//                     First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. 
+	//                     Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' />
+	//                 </div>
+	//             </div>
+	//         </div>
+	//     </div>
+	//     );
+	// }
+	// };
+
+	// export default Episodes;
+
 /***/ },
-/* 256 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27723,7 +27542,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Episodes = __webpack_require__(257);
+	var _Episodes = __webpack_require__(258);
 
 	var _Episodes2 = _interopRequireDefault(_Episodes);
 
@@ -27740,7 +27559,7 @@
 	exports.default = Episodes1Container;
 
 /***/ },
-/* 257 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27748,8 +27567,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -27759,7 +27576,7 @@
 
 	var _Video2 = _interopRequireDefault(_Video);
 
-	var _Title = __webpack_require__(252);
+	var _Title = __webpack_require__(253);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
@@ -27769,40 +27586,47 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Episodes1 = function (_React$Component) {
-	  _inherits(Episodes1, _React$Component);
-
-	  function Episodes1() {
-	    _classCallCheck(this, Episodes1);
-
-	    return _possibleConstructorReturn(this, (Episodes1.__proto__ || Object.getPrototypeOf(Episodes1)).apply(this, arguments));
-	  }
-
-	  _createClass(Episodes1, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_Video2.default, { customClass: 'episode-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
-	        _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Episode 1 Transcript' }),
-	        _react2.default.createElement(_Text2.default, { customClass: 'episode-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
-	      );
-	    }
-	  }]);
-
-	  return Episodes1;
-	}(_react2.default.Component);
-
-	;
+	function Episodes1(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(_Video2.default, { customClass: 'episode-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	    _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Episode 1 Transcript' }),
+	    _react2.default.createElement(_Text2.default, { customClass: 'episode-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
+	  );
+	};
 
 	exports.default = Episodes1;
+
+	// class Episodes1 extends React.Component{
+	//   render (){
+	//     return (
+	//       <div>
+	//         <Video customClass='episode-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
+	//         <Title customClass='episode-title' msg='Episode 1 Transcript' />
+	//         <Text customClass='episode-text' msg='A "rather unique" look at marketing and rap... 
+	//         In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.
+	//         We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' />
+	//       </div>
+	//     );
+	//   }
+	// };
+
+	// export default Episodes1;
+
+/***/ },
+/* 259 */,
+/* 260 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var Albums = ['/app/public/Slideshow/NasIllmatic.jpg', '/app/public/Slideshow/WuTang.jpg', '/app/public/Slideshow/JayZ.jpg', '/app/public/Slideshow/ATCQ.jpg'];
+
+	exports.default = Albums;
 
 /***/ }
 /******/ ]);
