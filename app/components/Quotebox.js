@@ -8,4 +8,8 @@ function Quotebox(props) {
 	);
 };
 
+Quotebox.propTypes={
+	quote: React.PropTypes.string
+}
+
 export default Quotebox;

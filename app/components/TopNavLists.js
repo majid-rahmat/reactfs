@@ -26,4 +26,12 @@ function TopNavSocial(props) {
     );
 };
 
+TopNavBar.propTypes={
+  customClass: React.PropTypes.string
+}
+
+TopNavSocial.propTypes={
+  customClass: React.PropTypes.string
+}
+
 module.exports = {TopNavBar, TopNavSocial};

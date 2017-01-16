@@ -8,4 +8,9 @@ function Image(props) {
 	);
 };
 
+Image.propTypes={
+	customClass: React.PropTypes.string,
+	src: React.PropTypes.string.isRequired
+}
+
 export default Image;

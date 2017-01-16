@@ -21499,19 +21499,19 @@
 
 	var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 
-	var _HhandiContainer = __webpack_require__(248);
+	var _HhandiContainer = __webpack_require__(249);
 
 	var _HhandiContainer2 = _interopRequireDefault(_HhandiContainer);
 
-	var _Hhandi1Container = __webpack_require__(251);
+	var _Hhandi1Container = __webpack_require__(252);
 
 	var _Hhandi1Container2 = _interopRequireDefault(_Hhandi1Container);
 
-	var _EpisodesContainer = __webpack_require__(255);
+	var _EpisodesContainer = __webpack_require__(256);
 
 	var _EpisodesContainer2 = _interopRequireDefault(_EpisodesContainer);
 
-	var _Episodes1Container = __webpack_require__(257);
+	var _Episodes1Container = __webpack_require__(258);
 
 	var _Episodes1Container2 = _interopRequireDefault(_Episodes1Container);
 
@@ -26472,11 +26472,11 @@
 	  );
 	}
 
-	exports.default = Main;
+	Main.propTypes = {
+	  children: _react2.default.PropTypes.object.isRequired
+	};
 
-	// Main.propTypes={
-	// 	children: React.PropTypes. .isRequired
-	// };
+	exports.default = Main;
 
 /***/ },
 /* 235 */
@@ -26650,6 +26650,14 @@
 	  );
 	};
 
+	TopNavBar.propTypes = {
+	  customClass: _react2.default.PropTypes.string
+	};
+
+	TopNavSocial.propTypes = {
+	  customClass: _react2.default.PropTypes.string
+	};
+
 	module.exports = { TopNavBar: TopNavBar, TopNavSocial: TopNavSocial };
 
 /***/ },
@@ -26752,6 +26760,10 @@
 	    null,
 	    props.close
 	  );
+	};
+
+	FooterComponent.propTypes = {
+	  close: _react2.default.PropTypes.string.isRequired
 	};
 
 	exports.default = FooterComponent;
@@ -26912,7 +26924,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	var _react = __webpack_require__(1);
@@ -26922,11 +26934,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function Image(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement('img', { className: props.customClass, src: props.src })
-	  );
+		return _react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement('img', { className: props.customClass, src: props.src })
+		);
+	};
+
+	Image.propTypes = {
+		customClass: _react2.default.PropTypes.string,
+		src: _react2.default.PropTypes.string.isRequired
 	};
 
 	exports.default = Image;
@@ -26959,6 +26976,11 @@
 		);
 	};
 
+	Text.propTypes = {
+		customClass: _react2.default.PropTypes.string,
+		msg: _react2.default.PropTypes.string.isRequired
+	};
+
 	exports.default = Text;
 
 /***/ },
@@ -26983,6 +27005,13 @@
 	    null,
 	    _react2.default.createElement("iframe", { className: props.customClass, src: props.src, width: props.width, height: props.height, frameBorder: "0", allowFullScreen: true })
 	  );
+	};
+
+	Video.propTypes = {
+	  customClass: _react2.default.PropTypes.string,
+	  src: _react2.default.PropTypes.string.isRequired,
+	  width: _react2.default.PropTypes.number.isRequired,
+	  height: _react2.default.PropTypes.number.isRequired
 	};
 
 	exports.default = Video;
@@ -27017,6 +27046,10 @@
 		);
 	};
 
+	Slideshow.propTypes = {
+		src: _react2.default.PropTypes.string.isRequired
+	};
+
 	exports.default = Slideshow;
 
 /***/ },
@@ -27033,7 +27066,7 @@
 
 	var _Slideshow2 = _interopRequireDefault(_Slideshow);
 
-	var _Albums = __webpack_require__(260);
+	var _Albums = __webpack_require__(248);
 
 	var _Albums2 = _interopRequireDefault(_Albums);
 
@@ -27072,6 +27105,19 @@
 
 /***/ },
 /* 248 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var Albums = ['/app/public/Slideshow/NasIllmatic.jpg', '/app/public/Slideshow/WuTang.jpg', '/app/public/Slideshow/JayZ.jpg', '/app/public/Slideshow/ATCQ.jpg'];
+
+	exports.default = Albums;
+
+/***/ },
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27084,7 +27130,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Hhandi = __webpack_require__(249);
+	var _Hhandi = __webpack_require__(250);
 
 	var _Hhandi2 = _interopRequireDefault(_Hhandi);
 
@@ -27101,7 +27147,7 @@
 	exports.default = HhandiContainer;
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27114,7 +27160,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TableOfContents = __webpack_require__(250);
+	var _TableOfContents = __webpack_require__(251);
 
 	var _TableOfContents2 = _interopRequireDefault(_TableOfContents);
 
@@ -27159,7 +27205,7 @@
 	// };
 
 /***/ },
-/* 250 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27206,10 +27252,14 @@
 	  );
 	};
 
+	Image.propTypes = {
+	  customClass: _react2.default.PropTypes.string
+	};
+
 	exports.default = TableOfContents;
 
 /***/ },
-/* 251 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27222,7 +27272,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Hhandi = __webpack_require__(252);
+	var _Hhandi = __webpack_require__(253);
 
 	var _Hhandi2 = _interopRequireDefault(_Hhandi);
 
@@ -27239,7 +27289,7 @@
 	exports.default = Hhandi1Container;
 
 /***/ },
-/* 252 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27252,11 +27302,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Title = __webpack_require__(253);
+	var _Title = __webpack_require__(254);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
-	var _Quotebox = __webpack_require__(254);
+	var _Quotebox = __webpack_require__(255);
 
 	var _Quotebox2 = _interopRequireDefault(_Quotebox);
 
@@ -27325,13 +27375,13 @@
 	// };
 
 /***/ },
-/* 253 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-			value: true
+		value: true
 	});
 
 	var _react = __webpack_require__(1);
@@ -27341,21 +27391,26 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function Title(props) {
-			return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-							'h1',
-							{ className: props.customClass },
-							props.msg
-					)
-			);
+		return _react2.default.createElement(
+			'div',
+			null,
+			_react2.default.createElement(
+				'h1',
+				{ className: props.customClass },
+				props.msg
+			)
+		);
+	};
+
+	Title.propTypes = {
+		customClass: _react2.default.PropTypes.string,
+		msg: _react2.default.PropTypes.string.isRequired
 	};
 
 	exports.default = Title;
 
 /***/ },
-/* 254 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27382,10 +27437,14 @@
 	  );
 	};
 
+	Quotebox.propTypes = {
+	  quote: _react2.default.PropTypes.string
+	};
+
 	exports.default = Quotebox;
 
 /***/ },
-/* 255 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27398,7 +27457,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Episodes = __webpack_require__(256);
+	var _Episodes = __webpack_require__(257);
 
 	var _Episodes2 = _interopRequireDefault(_Episodes);
 
@@ -27415,7 +27474,7 @@
 	exports.default = EpisodesContainer;
 
 /***/ },
-/* 256 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27432,7 +27491,7 @@
 
 	var _Text2 = _interopRequireDefault(_Text);
 
-	var _Title = __webpack_require__(253);
+	var _Title = __webpack_require__(254);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
@@ -27529,7 +27588,7 @@
 	// export default Episodes;
 
 /***/ },
-/* 257 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27542,7 +27601,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Episodes = __webpack_require__(258);
+	var _Episodes = __webpack_require__(259);
 
 	var _Episodes2 = _interopRequireDefault(_Episodes);
 
@@ -27559,7 +27618,7 @@
 	exports.default = Episodes1Container;
 
 /***/ },
-/* 258 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27576,7 +27635,7 @@
 
 	var _Video2 = _interopRequireDefault(_Video);
 
-	var _Title = __webpack_require__(253);
+	var _Title = __webpack_require__(254);
 
 	var _Title2 = _interopRequireDefault(_Title);
 
@@ -27613,20 +27672,6 @@
 	// };
 
 	// export default Episodes1;
-
-/***/ },
-/* 259 */,
-/* 260 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var Albums = ['/app/public/Slideshow/NasIllmatic.jpg', '/app/public/Slideshow/WuTang.jpg', '/app/public/Slideshow/JayZ.jpg', '/app/public/Slideshow/ATCQ.jpg'];
-
-	exports.default = Albums;
 
 /***/ }
 /******/ ]);

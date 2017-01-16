@@ -10,4 +10,8 @@ const src = props.src;
 	);
 };
 
+Slideshow.propTypes = {
+	src: React.PropTypes.string.isRequired
+}
+
 export default Slideshow;

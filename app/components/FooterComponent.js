@@ -8,6 +8,10 @@ function FooterComponent(props) {
   	);
 };
 
+FooterComponent.propTypes={
+	close: React.PropTypes.string.isRequired
+}
+
 export default FooterComponent;
 
 // class FooterComponent extends React.Component{

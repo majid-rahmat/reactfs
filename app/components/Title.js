@@ -8,4 +8,9 @@ function Title(props) {
     );
 };
 
+Title.propTypes={
+	customClass: React.PropTypes.string,
+	msg: React.PropTypes.string.isRequired
+}
+
 export default Title;

@@ -13,4 +13,8 @@ function TableOfContents(props) {
     );
 };
 
+Image.propTypes={
+	customClass: React.PropTypes.string
+}
+
 export default TableOfContents;
