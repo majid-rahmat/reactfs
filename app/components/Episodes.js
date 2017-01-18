@@ -16,7 +16,7 @@ function Episodes(props) {
             </div>
             
             <div className='episode'>
-                <Link to='/Episodes/Episodes1'><Title customClass='episodes-title' msg='Episode 1:'/></Link>
+                <Link to='/episodes/epi1'><Title customClass='episodes-title' msg='Episode 1:'/></Link>
                 
                 <div className='episode-text-vid'>
                     <Video customClass='episodes-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
@@ -27,7 +27,8 @@ function Episodes(props) {
             </div>
             
             <div className='episode'>
-                <Title customClass='episodes-title' msg='Episode 2:'/>
+                <Link to='/episodes/epi2'><Title customClass='episodes-title' msg='Episode 2:'/></Link>
+                
                 <div className='episode-text-vid'>
                     <Video customClass='episodes-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
                     <Text customClass='episodes-des' msg='The ruler is Back!

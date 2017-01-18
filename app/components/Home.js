@@ -23,7 +23,7 @@ function Home(props) {
               <div className='home-header-video-container'>
                 <Text customClass='home-header-text-vid' msg='Press play for a look at pop culture through marketing, branding and business strategy (or is it the other way round?!)
                 Click here for more episodes' />
-                <Video customClass='home-header-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
+                <Video customClass='home-header-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width="560" height="315" />
               </div>
             </div>
           </div>

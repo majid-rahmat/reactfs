@@ -11,8 +11,8 @@ function Video(props) {
 Video.propTypes={
   customClass: React.PropTypes.string,
   src: React.PropTypes.string.isRequired,
-  width: React.PropTypes.number.isRequired,
-  height: React.PropTypes.number.isRequired
+  width: React.PropTypes.string,
+  height: React.PropTypes.string
 }
 
 export default Video;

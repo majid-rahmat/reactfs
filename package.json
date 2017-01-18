@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch && http-server"
+    "start": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.1.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0"

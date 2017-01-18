@@ -11,7 +11,8 @@ function Hhandi1(props) {
             <Title customClass='episode-title' msg='Why Rap 1' />
 
             <div className="content text-quotes">
-                <Quotebox quote='Lorem ipsum dolor.' />
+                <Quotebox quote='Lorem ipsum dolor.' say='Jay-Z' />
+             
             </div>
         
             <Video customClass='hhandi1-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />

@@ -13,9 +13,9 @@ const routes = (
     <Route path="/" component={Main}>
     	<IndexRoute component={HomeContainer} />
     	<Route path="/hhandi" component={HhandiContainer} />
-    	<Route path="/hhandi/hhandi1" component={Hhandi1Container} /> 
+    	<Route path="/hhandi/:hiphopandi" component={Hhandi1Container} /> 
     	<Route path="/episodes" component={EpisodesContainer} />
-    	<Route path="/episodes/episodes1" component={Episodes1Container} />
+    	<Route path="/episodes/:epi" component={Episodes1Container} />
     </Route>
   </Router>
 );

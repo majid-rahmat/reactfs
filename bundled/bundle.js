@@ -21525,9 +21525,9 @@
 	    { path: '/', component: _Main2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomeContainer2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/hhandi', component: _HhandiContainer2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/hhandi/hhandi1', component: _Hhandi1Container2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/hhandi/:hiphopandi', component: _Hhandi1Container2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes', component: _EpisodesContainer2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes/episodes1', component: _Episodes1Container2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/episodes/:epi', component: _Episodes1Container2.default })
 	  )
 	);
 
@@ -26565,87 +26565,80 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var links = [{
+	  id: 0,
+	  link: '/',
+	  name: 'Home |'
+	}, {
+	  id: 1,
+	  link: '/hhandi',
+	  name: 'HH&I |'
+	}, {
+	  id: 2,
+	  link: '/episodes',
+	  name: 'Episodes'
+	}];
+
 	function TopNavBar(props) {
+	  var listItems = links.map(function (object) {
+	    return _react2.default.createElement(
+	      'li',
+	      { key: object.id },
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: object.link },
+	        object.name
+	      )
+	    );
+	  });
 	  return _react2.default.createElement(
 	    'div',
 	    null,
 	    _react2.default.createElement(
 	      'ul',
 	      { className: props.customClass },
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/' },
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          'Home |'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/hhandi' },
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          'HH&I |'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/episodes' },
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          'Episodes'
-	        )
-	      )
+	      listItems
 	    )
 	  );
 	};
 
+	var Social = [{
+	  id: 0,
+	  href: '#',
+	  className: 'fa fa-facebook-square fa-3x'
+	}, {
+	  id: 1,
+	  href: '#',
+	  className: 'fa fa-twitter fa-3x'
+	}, {
+	  id: 2,
+	  href: '#',
+	  className: 'fa fa-youtube fa-3x'
+	}, {
+	  id: 3,
+	  href: '#',
+	  className: 'fa fa-instagram fa-3x'
+	}];
+
 	function TopNavSocial(props) {
+	  var SocialItems = Social.map(function (object) {
+	    return _react2.default.createElement(
+	      'li',
+	      { key: object.id },
+	      _react2.default.createElement(
+	        'a',
+	        { href: object.href },
+	        _react2.default.createElement('i', { className: object.className, 'aria-hidden': 'true' })
+	      )
+	    );
+	  });
 	  return _react2.default.createElement(
 	    'div',
 	    null,
 	    _react2.default.createElement(
 	      'ul',
 	      { className: props.customClass },
-	      _react2.default.createElement(
-	        'li',
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#' },
-	          _react2.default.createElement('i', { className: 'fa fa-facebook-square fa-3x', 'aria-hidden': 'true' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'li',
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#' },
-	          _react2.default.createElement('i', { className: 'fa fa-twitter fa-3x', 'aria-hidden': 'true' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'li',
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#' },
-	          _react2.default.createElement('i', { className: 'fa fa-youtube fa-3x', 'aria-hidden': 'true' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'li',
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#' },
-	          _react2.default.createElement('i', { className: 'fa fa-instagram fa-3x', 'aria-hidden': 'true' })
-	        )
-	      )
+	      SocialItems
 	    )
 	  );
 	};
@@ -27010,8 +27003,8 @@
 	Video.propTypes = {
 	  customClass: _react2.default.PropTypes.string,
 	  src: _react2.default.PropTypes.string.isRequired,
-	  width: _react2.default.PropTypes.number.isRequired,
-	  height: _react2.default.PropTypes.number.isRequired
+	  width: _react2.default.PropTypes.string,
+	  height: _react2.default.PropTypes.string
 	};
 
 	exports.default = Video;
@@ -27222,38 +27215,40 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var links = [{
+	  id: 0,
+	  name: 'Table of Contents'
+	}, {
+	  id: 1,
+	  link: '/hhandi/hiphopandi1',
+	  name: 'Why Rap 1'
+	}, {
+	  id: 2,
+	  link: '/hhandi/hiphophandi2',
+	  name: 'Why Rap 2'
+	}];
+
 	function TableOfContents(props) {
+	  var listItems = links.map(function (object) {
+	    return _react2.default.createElement(
+	      'li',
+	      { key: object.id },
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: object.link },
+	        object.name
+	      )
+	    );
+	  });
 	  return _react2.default.createElement(
 	    'div',
 	    null,
 	    _react2.default.createElement(
 	      'ul',
 	      { className: props.customClass },
-	      _react2.default.createElement(
-	        'li',
-	        null,
-	        'Table of Contents'
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/hhandi/hhandi1' },
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          'Why Rap 1'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'li',
-	        null,
-	        'Why Rap 2'
-	      )
+	      listItems
 	    )
 	  );
-	};
-
-	Image.propTypes = {
-	  customClass: _react2.default.PropTypes.string
 	};
 
 	exports.default = TableOfContents;
@@ -27328,7 +27323,7 @@
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'content text-quotes' },
-	            _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.' })
+	            _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.', say: 'Jay-Z' })
 	        ),
 	        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
 	        _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
@@ -27433,12 +27428,18 @@
 	      'blockquote',
 	      null,
 	      props.quote
+	    ),
+	    _react2.default.createElement(
+	      'cite',
+	      null,
+	      props.say
 	    )
 	  );
 	};
 
 	Quotebox.propTypes = {
-	  quote: _react2.default.PropTypes.string
+	  quote: _react2.default.PropTypes.string,
+	  say: _react2.default.PropTypes.string
 	};
 
 	exports.default = Quotebox;
@@ -27520,7 +27521,7 @@
 	                { className: 'episode' },
 	                _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: '/Episodes/Episodes1' },
+	                    { to: '/episodes/epi1' },
 	                    _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 1:' })
 	                ),
 	                _react2.default.createElement(
@@ -27533,7 +27534,11 @@
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'episode' },
-	                _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 2:' }),
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/episodes/epi2' },
+	                    _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 2:' })
+	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'episode-text-vid' },
