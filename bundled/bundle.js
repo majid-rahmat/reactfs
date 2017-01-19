@@ -26531,7 +26531,7 @@
 	    'div',
 	    null,
 	    _react2.default.createElement(
-	      'div',
+	      'nav',
 	      { className: 'top-nav' },
 	      _react2.default.createElement(
 	        'h1',
@@ -26843,28 +26843,41 @@
 	    null,
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'home-header-container' },
+	      { className: 'ui container' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'header-container' },
-	        _react2.default.createElement(_Image2.default, { customClass: 'home-header-image', src: '/app/public/images/IHeartRap.jpg' })
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'home-text-vid' },
-	        _react2.default.createElement(_Text2.default, { customClass: 'home-header-text-top', msg: 'This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all \u2014 from the battle-hardened hip hop head to the soon-to-be-Stan\u2014 and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. \r Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.\r Click here for more.' }),
+	        { className: 'ui grid' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'home-header-video-container' },
-	          _react2.default.createElement(_Text2.default, { customClass: 'home-header-text-vid', msg: 'Press play for a look at pop culture\xA0through marketing, branding and business strategy (or is it the other way round?!)\r Click here for more episodes' }),
-	          _react2.default.createElement(_Video2.default, { customClass: 'home-header-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' })
+	          { className: 'six wide column' },
+	          _react2.default.createElement(_Image2.default, { customClass: 'ui large image', src: '/app/public/images/IHeartRap.jpg' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'ten wide column' },
+	          _react2.default.createElement(_Text2.default, { customClass: 'column', msg: 'This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all \u2014 from the battle-hardened hip hop head to the soon-to-be-Stan\u2014 and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. \r Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.\r Click here for more.' }),
+	          _react2.default.createElement('div', { className: 'ui divider' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'ui two column grid' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'column x' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'middle aligned content' },
+	                _react2.default.createElement(_Text2.default, { msg: 'Press play for a look at pop culture\xA0through marketing, branding and business strategy (or is it the other way round?!)\r Click here for more episodes' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'column x' },
+	              _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '340', height: '225' })
+	            )
+	          )
 	        )
-	      )
-	    ),
-	    _react2.default.createElement('hr', null),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'home-slideshow' },
+	      ),
+	      _react2.default.createElement('div', { className: 'ui divider' }),
 	      _react2.default.createElement(_SlideshowContainer2.default, null)
 	    )
 	  );
@@ -26872,43 +26885,7 @@
 
 	exports.default = Home;
 
-	// class Home extends React.Component{
-	//   render(){
-	//     return(
-	//       <div>
-
-	//           <div className='home-header-container'>
-
-	//             <div className='header-container'>
-	//               <Image customClass='home-header-image' src='/app/public/images/IHeartRap.jpg' /> 
-	//             </div>
-
-	//             <div className='home-text-vid'>
-	//               <Text customClass='home-header-text-top' msg='This site strives to be a primary point of interaction between you and the rap world. It is a digital haven and sanctuary for all — from the battle-hardened hip hop head to the soon-to-be-Stan— and is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!
-	//               The site’s objectives are threefold; verbally, these are: to educate, to entertain, and to inspire. 
-	//               Together, we will proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.
-	//               Click here for more.' />
-
-	//               <div className='home-header-video-container'>
-	//                 <Text customClass='home-header-text-vid' msg='Press play for a look at pop culture through marketing, branding and business strategy (or is it the other way round?!)
-	//                 Click here for more episodes' />
-	//                 <Video customClass='home-header-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
-	//               </div>
-	//             </div>
-	//           </div>
-
-	//           <hr />
-
-	//           <div className='home-slideshow'>
-	//             <SlideshowContainer />
-	//           </div>
-
-	//       </div>
-	//     );
-	//   }
-	// };
-
-	// export default Home;
+	_react2.default.createElement('div', { className: 'home-header-container' });
 
 /***/ },
 /* 243 */
@@ -27013,7 +26990,7 @@
 /* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -27028,14 +27005,18 @@
 	function Slideshow(props) {
 		var src = props.src;
 		return _react2.default.createElement(
-			'div',
+			"div",
 			null,
 			_react2.default.createElement(
-				'h1',
+				"div",
 				null,
-				'\uD83C\uDFA4 The GOATs \uD83D\uDC10'
-			),
-			_react2.default.createElement('img', { src: src })
+				_react2.default.createElement(
+					"h1",
+					{ className: "ui center aligned segment" },
+					"\uD83C\uDFA4 The GOATs \uD83D\uDC10"
+				),
+				_react2.default.createElement("img", { className: "ui large centered rounded image", src: src })
+			)
 		);
 	};
 

@@ -4,8 +4,10 @@ function Slideshow(props) {
 const src = props.src;
 	return (
 	<div>
-		<h1>🎤 The GOATs 🐐</h1>
-	    <img src={src} />
+		<div>
+			<h1 className="ui center aligned segment">🎤 The GOATs 🐐</h1>
+	    	<img className="ui large centered rounded image" src={src} />
+	    </div>
 	</div>
 	);
 };
