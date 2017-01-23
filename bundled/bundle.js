@@ -27489,16 +27489,16 @@
 	                    'div',
 	                    { className: 'thirteen wide column centered' },
 	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/episodes/epi1' },
+	                        _react2.default.createElement(_Title2.default, { msg: 'Episode 1:' })
+	                    ),
+	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'ui two column grid' },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'column' },
-	                            _react2.default.createElement(
-	                                _reactRouter.Link,
-	                                { to: '/episodes/epi1' },
-	                                _react2.default.createElement(_Title2.default, { msg: 'Episode 1:' })
-	                            ),
 	                            _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '100%', height: '315' })
 	                        ),
 	                        _react2.default.createElement(
@@ -27516,11 +27516,23 @@
 	                        { to: '/episodes/epi2' },
 	                        _react2.default.createElement(_Title2.default, { msg: 'Episode 2:' })
 	                    ),
-	                    _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'ui segment' },
-	                        _react2.default.createElement(_Text2.default, { msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	                        { className: 'ui two column grid' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '100%', height: '315' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'ui segment' },
+	                                _react2.default.createElement(_Text2.default, { msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	                            )
+	                        )
 	                    )
 	                )
 	            )

@@ -20,10 +20,10 @@ function Episodes(props) {
                 
                 <div className='thirteen wide column centered'>
                 
+                <Link to='/episodes/epi1'><Title msg='Episode 1:'/></Link>
                 <div className='ui two column grid'>
                 
                 <div className='column'>
-                <Link to='/episodes/epi1'><Title msg='Episode 1:'/></Link>
                 <Video src='https://www.youtube.com/embed/Jsb4EDtTDyk' width="100%" height='315' />
                 </div>
                 
@@ -41,15 +41,22 @@ function Episodes(props) {
 
                 
                 <Link to='/episodes/epi2'><Title msg='Episode 2:'/></Link>
+                <div className='ui two column grid'>
                 
-                    <Video src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
+                    <div className='column'>
+                
+                    <Video src='https://www.youtube.com/embed/08vEi-vhZIA' width="100%" height='315' />
+                    </div>
+                    <div className="column">
                     <div className="ui segment">
                     <Text msg='The ruler is Back!
                     First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. 
                     Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' />
                     </div>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>        
     );
