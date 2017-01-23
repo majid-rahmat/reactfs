@@ -4,16 +4,19 @@ import { Link } from 'react-router';
 const links = [
   {
     id: 0,
+    class:"item",
     link: '/',
-    name: 'Home |'
+    name: 'Home'
   },
   {
     id: 1,
+    class:"item",
     link: '/hhandi',
-    name: 'HH&I |'
+    name: 'HH&I'
   },
   {
     id: 2,
+    class:"item",
     link: '/episodes',
     name: 'Episodes'
   }
@@ -21,50 +24,48 @@ const links = [
 
 function TopNavBar(props) {
     const listItems = links.map((object) =>
-      <li key={ object.id }><Link to={object.link}>{object.name}</Link></li>
+      <a className={object.class} key={ object.id }><Link to={object.link}>{object.name}</Link></a>
       );
-    return (
-      <div>
-        <ul className={props.customClass}>{listItems}</ul>
-            
-      </div>
-    );
+    return (<template> {listItems}</template>) 
+      
+    
 };
 
 const Social = [
   {
     id: 0,
+    class:"item",
     href: '#',
-    className: 'fa fa-facebook-square fa-3x'
+    className: 'big facebook icon'
   },
   {
     id: 1,
+    class:"item",
     href: '#',
-    className: 'fa fa-twitter fa-3x'
+    className: 'big twitter icon'
   },
   {
     id: 2,
+    class:"item",
     href: '#',
-    className: 'fa fa-youtube fa-3x'
+    className: 'big youtube icon'
   },
   {
     id: 3,
+    class:"item",
     href: '#',
-    className: 'fa fa-instagram fa-3x'
+    className: 'big instagram icon'
   }
 ];
 
 function TopNavSocial(props) {
     const SocialItems = Social.map((object) =>
-      <li key={ object.id }><a href={object.href}><i className={object.className} aria-hidden='true'></i></a></li>
+      
+      <a href={object.href} className={object.class}><i className={object.className}></i></a>
       );
-    return (
-      <div>
+      
+    return (<i className="icons item right">{SocialItems}</i>)
         
-        <ul className={props.customClass}>{SocialItems}</ul>
-            
-      </div>
-    );
 };
 
 TopNavBar.propTypes={

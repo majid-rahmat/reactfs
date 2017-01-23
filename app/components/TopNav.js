@@ -5,14 +5,22 @@ function TopNav(props) {
     return(
       <div>
         
-        <nav className='top-nav'>
-          <h1 className='top-logo'>Blogological</h1>
-          <TopNavBar customClass='top-nav-bar' />    
-          <TopNavSocial customClass='top-nav-social' />    
-          <p className='top-slogan'>Hip Hop 4 Better Dayz</p>
-        </nav>
-        
-      </div>
+          <div className="ui fixed inverted menu">
+          <div className="ui container">
+          
+            
+            <a href="#" className="header item">
+            <h1 className="logo">Blogological</h1>
+            </a>
+                      
+            <TopNavBar />
+                        
+            <TopNavSocial />
+            
+          </div>
+        </div>
+        </div>
+      
     );
 };
 

@@ -5,7 +5,7 @@ import FooterContainer from './FooterContainer';
 function Main (props) {
   	return (
 		<div>
-        	<TopNavContainer />
+			<TopNavContainer />
         	{props.children}
         	<FooterContainer />
       	</div>

@@ -26531,19 +26531,22 @@
 	    'div',
 	    null,
 	    _react2.default.createElement(
-	      'nav',
-	      { className: 'top-nav' },
+	      'div',
+	      { className: 'ui fixed inverted menu' },
 	      _react2.default.createElement(
-	        'h1',
-	        { className: 'top-logo' },
-	        'Blogological'
-	      ),
-	      _react2.default.createElement(_TopNavLists.TopNavBar, { customClass: 'top-nav-bar' }),
-	      _react2.default.createElement(_TopNavLists.TopNavSocial, { customClass: 'top-nav-social' }),
-	      _react2.default.createElement(
-	        'p',
-	        { className: 'top-slogan' },
-	        'Hip Hop 4 Better Dayz'
+	        'div',
+	        { className: 'ui container' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#', className: 'header item' },
+	          _react2.default.createElement(
+	            'h1',
+	            { className: 'logo' },
+	            'Blogological'
+	          )
+	        ),
+	        _react2.default.createElement(_TopNavLists.TopNavBar, null),
+	        _react2.default.createElement(_TopNavLists.TopNavSocial, null)
 	      )
 	    )
 	  );
@@ -26567,14 +26570,17 @@
 
 	var links = [{
 	  id: 0,
+	  class: "item",
 	  link: '/',
-	  name: 'Home |'
+	  name: 'Home'
 	}, {
 	  id: 1,
+	  class: "item",
 	  link: '/hhandi',
-	  name: 'HH&I |'
+	  name: 'HH&I'
 	}, {
 	  id: 2,
+	  class: "item",
 	  link: '/episodes',
 	  name: 'Episodes'
 	}];
@@ -26582,8 +26588,8 @@
 	function TopNavBar(props) {
 	  var listItems = links.map(function (object) {
 	    return _react2.default.createElement(
-	      'li',
-	      { key: object.id },
+	      'a',
+	      { className: object.class, key: object.id },
 	      _react2.default.createElement(
 	        _reactRouter.Link,
 	        { to: object.link },
@@ -26592,54 +26598,48 @@
 	    );
 	  });
 	  return _react2.default.createElement(
-	    'div',
+	    'template',
 	    null,
-	    _react2.default.createElement(
-	      'ul',
-	      { className: props.customClass },
-	      listItems
-	    )
+	    ' ',
+	    listItems
 	  );
 	};
 
 	var Social = [{
 	  id: 0,
+	  class: "item",
 	  href: '#',
-	  className: 'fa fa-facebook-square fa-3x'
+	  className: 'big facebook icon'
 	}, {
 	  id: 1,
+	  class: "item",
 	  href: '#',
-	  className: 'fa fa-twitter fa-3x'
+	  className: 'big twitter icon'
 	}, {
 	  id: 2,
+	  class: "item",
 	  href: '#',
-	  className: 'fa fa-youtube fa-3x'
+	  className: 'big youtube icon'
 	}, {
 	  id: 3,
+	  class: "item",
 	  href: '#',
-	  className: 'fa fa-instagram fa-3x'
+	  className: 'big instagram icon'
 	}];
 
 	function TopNavSocial(props) {
 	  var SocialItems = Social.map(function (object) {
 	    return _react2.default.createElement(
-	      'li',
-	      { key: object.id },
-	      _react2.default.createElement(
-	        'a',
-	        { href: object.href },
-	        _react2.default.createElement('i', { className: object.className, 'aria-hidden': 'true' })
-	      )
+	      'a',
+	      { href: object.href, className: object.class },
+	      _react2.default.createElement('i', { className: object.className })
 	    );
 	  });
+
 	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'ul',
-	      { className: props.customClass },
-	      SocialItems
-	    )
+	    'i',
+	    { className: 'icons item right' },
+	    SocialItems
 	  );
 	};
 
@@ -26690,7 +26690,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _react = __webpack_require__(1);
@@ -26704,32 +26704,22 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function Footer(props) {
-	    return _react2.default.createElement(
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'ui inverted vertical footer segment ui fixed bottom' },
+	      _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'bottom-bar' },
-	            _react2.default.createElement(_FooterComponent2.default, { close: 'To Educate. To Entertain. To Inspire.' })
-	        )
-	    );
+	        { className: 'ui center aligned container' },
+	        _react2.default.createElement(_FooterComponent2.default, { close: 'To Educate. To Entertain. To Inspire.' })
+	      )
+	    )
+	  );
 	};
 
 	exports.default = Footer;
-
-	// class Footer extends React.Component{
-	//     render (){
-	//         return(
-	//             <div>
-
-	//             <div className='bottom-bar'>
-	//                 <FooterComponent close='To Educate. To Entertain. To Inspire.' />
-	//             </div>
-
-	//         </div> 
-	//         );
-	//     }
-	// };
 
 /***/ },
 /* 240 */
@@ -26760,16 +26750,6 @@
 	};
 
 	exports.default = FooterComponent;
-
-	// class FooterComponent extends React.Component{
-	// 	render(){
-	// 		return(
-	// 		<div>
-	//     		{this.props.close}
-	//     	</div> 
-	// 		);
-	// 	}
-	// };
 
 /***/ },
 /* 241 */
@@ -27150,33 +27130,40 @@
 	        null,
 	        _react2.default.createElement(
 	            'div',
-	            { className: 'hhandi-wrapper' },
-	            _react2.default.createElement(_TableOfContents2.default, { customClass: 'table-of-contents' }),
-	            _react2.default.createElement(_Text2.default, { customClass: 'hhandi-top-text', msg: 'Rhythm And Poetry; that\u2019s what rap literally and figuratively stands for. \r The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.\r Click here to continue reading!' }),
-	            _react2.default.createElement(_Text2.default, { customClass: 'hhandi-about-author', msg: 'About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' })
+	            { className: 'ui container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'ui grid' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'six wide column' },
+	                    _react2.default.createElement(_TableOfContents2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'ten wide column' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'row' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(_Text2.default, { msg: 'Rhythm And Poetry; that\u2019s what rap literally and figuratively stands for. \r The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.\r Click here to continue reading!' })
+	                        ),
+	                        _react2.default.createElement('div', { className: 'ui divider' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(_Text2.default, { msg: 'About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' })
+	                        )
+	                    )
+	                )
+	            )
 	        )
 	    );
 	};
 
 	exports.default = Hhandi;
-
-	// class Hhandi extends React.Component{
-	//     render (){
-	//         return (
-	//         <div>
-
-	//             <div className='hhandi-wrapper'>
-	//                 <TableOfContents customClass='table-of-contents' />
-	//                 <Text customClass='hhandi-top-text' msg='Rhythm And Poetry; that’s what rap literally and figuratively stands for. 
-	//                 The Big Apple cultivated these musical Gemini to create unforgettable, far-reaching musical memories. Dudes molded wax to discuss their inner demons, vent their frustrations, talk about the ills that continue to plague their societies, and brashly declare their ambitions, visions, and dreams.
-	//                 Click here to continue reading!'/>
-	//                 <Text customClass='hhandi-about-author' msg='About the Author: Majid Rahmat is a Pakistani-Canuck who founded Blogological while working on his MBA from Syracuse University.' />
-	//             </div>
-
-	//         </div>
-	//         );
-	//     }
-	// };
 
 /***/ },
 /* 251 */
@@ -27300,55 +27287,49 @@
 	    return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Why Rap 1' }),
 	        _react2.default.createElement(
 	            'div',
-	            { className: 'content text-quotes' },
-	            _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.', say: 'Jay-Z' })
-	        ),
-	        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
-	        _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'content text-quotes' },
-	            _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' })
-	        ),
-	        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
-	        _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	            { className: 'ui container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'ui grid' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'thirteen wide column centered' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui center aligned container' },
+	                        _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Why Rap 1' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'content text-quotes' },
+	                        _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor.', say: 'Jay-Z' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui center aligned container' },
+	                        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' })
+	                    ),
+	                    _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'content text-quotes' },
+	                        _react2.default.createElement(_Quotebox2.default, { quote: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui center aligned container' },
+	                        _react2.default.createElement(_Video2.default, { customClass: 'hhandi1-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' })
+	                    ),
+	                    _react2.default.createElement(_Text2.default, { customClass: 'hhandi1-text', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	                )
+	            )
+	        )
 	    );
 	};
 
 	exports.default = Hhandi1;
-
-	// class Hhandi1 extends React.Component{
-	//     render(){
-	//         return(
-	//         <div>
-
-	//             <Title customClass='episode-title' msg='Why Rap 1' />
-
-	//             <div className="content text-quotes">
-	//                 <Quotebox quote='Lorem ipsum dolor.' />
-	//             </div>
-
-	//             <Video customClass='hhandi1-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
-	//             <Text customClass='hhandi1-text' msg='A "rather unique" look at marketing and rap... 
-	//             In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.
-	//             We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' />
-
-	//             <div className="content text-quotes">
-	//                 <Quotebox quote='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, alias ut facere?' />
-	//             </div>
-
-	//             <Video customClass='hhandi1-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
-	//             <Text customClass='hhandi1-text' msg='The ruler is Back!
-	//             First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. 
-	//             Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' />
-
-	//         </div>
-	//         );
-	//     }
-	// };
 
 /***/ },
 /* 254 */
@@ -27389,7 +27370,7 @@
 /* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27403,17 +27384,21 @@
 
 	function Quotebox(props) {
 	  return _react2.default.createElement(
-	    'div',
+	    "div",
 	    null,
 	    _react2.default.createElement(
-	      'blockquote',
+	      "blockquote",
 	      null,
 	      props.quote
 	    ),
 	    _react2.default.createElement(
-	      'cite',
-	      null,
-	      props.say
+	      "div",
+	      { className: "ui center aligned container" },
+	      _react2.default.createElement(
+	        "cite",
+	        null,
+	        props.say
+	      )
 	    )
 	  );
 	};
@@ -27491,40 +27476,52 @@
 	        null,
 	        _react2.default.createElement(
 	            'div',
-	            { className: 'episodes-wrapper' },
+	            { className: 'ui container' },
 	            _react2.default.createElement(
 	                'div',
-	                { className: 'episodes-header' },
-	                _react2.default.createElement(_Text2.default, { msg: 'Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all \u2013 from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.\r So, please, let\u2019s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.' })
-	            ),
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'episode' },
+	                { className: 'ui grid' },
 	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/episodes/epi1' },
-	                    _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 1:' })
+	                    'div',
+	                    { className: 'eleven wide column centered' },
+	                    _react2.default.createElement(_Text2.default, { msg: 'Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all \u2013 from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!\r The site\u2019s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.\r So, please, let\u2019s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.' })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'episode-text-vid' },
-	                    _react2.default.createElement(_Video2.default, { customClass: 'episodes-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
-	                    _react2.default.createElement(_Text2.default, { customClass: 'episodes-des', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'episode' },
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/episodes/epi2' },
-	                    _react2.default.createElement(_Title2.default, { customClass: 'episodes-title', msg: 'Episode 2:' })
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'episode-text-vid' },
-	                    _react2.default.createElement(_Video2.default, { customClass: 'episodes-vid', src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
-	                    _react2.default.createElement(_Text2.default, { customClass: 'episodes-des', msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	                    { className: 'thirteen wide column centered' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui two column grid' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(
+	                                _reactRouter.Link,
+	                                { to: '/episodes/epi1' },
+	                                _react2.default.createElement(_Title2.default, { msg: 'Episode 1:' })
+	                            ),
+	                            _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '100%', height: '315' })
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'column' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'ui segment' },
+	                                _react2.default.createElement(_Text2.default, { msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
+	                            )
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/episodes/epi2' },
+	                        _react2.default.createElement(_Title2.default, { msg: 'Episode 2:' })
+	                    ),
+	                    _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/08vEi-vhZIA', width: '560', height: '315' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'ui segment' },
+	                        _react2.default.createElement(_Text2.default, { msg: 'The ruler is Back!\r First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. \r Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' })
+	                    )
 	                )
 	            )
 	        )
@@ -27533,45 +27530,43 @@
 
 	exports.default = Episodes;
 
-	// class Episodes extends React.Component{
-	//     render(){
+	// class TopNavigation extends React.Component({
+	//     constructor(props) {
+	//         super(props);
+	//     }
+
+
+	//     const list = links.map((link) => {
+
+
+	//     });
+
+
+	//     const icons = icons.map((icon) => {
+
+	//     });
+
+
+	//     render() {
+
 	//         return (
-	//         <div>
-	//         <div className='episodes-wrapper'>
 
-	//             <div className='episodes-header'>
-	//                 <Text msg='Blogological strives to be a primary point of interaction between you and the (rap) world. It is a digital haven and sanctuary for all – from the battle-hardened hip hop head to the soon-to-be-Stan. It is a platform for YOUR active participation and engagement in showcasing the world, its wonders, and its people to its people!
-	//                 The site’s objectives are threefold, (verbally) these are: to educate, to entertain, and to inspire; anything beyond is consumer surplus. TOGETHER, we shall overcome because only TOGETHER can we overcome.
-	//                 So, please, let’s use this space to change, save, and heal the world! If not world peace or some grander motivation, then, let us at least, push, promote, and proliferate the positivity encapsulated within the musical Gemini- Rhythm And Poetry.'/>
-	//             </div>
+	//          <div className="ui fixed inverted menu">
+	//          <div className="ui container">
 
-	//             <div className='episode'>
-	//                 <Link to='/Episodes/Episodes1'><Title customClass='episodes-title' msg='Episode 1:'/></Link>
+	//             {list}
+	//             {icons} 
 
-	//                 <div className='episode-text-vid'>
-	//                     <Video customClass='episodes-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
-	//                     <Text customClass='episodes-des' msg='A "rather unique" look at marketing and rap... 
-	//                     In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.
-	//                     We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' />
-	//                 </div>                
-	//             </div>
 
-	//             <div className='episode'>
-	//                 <Title customClass='episodes-title' msg='Episode 2:'/>
-	//                 <div className='episode-text-vid'>
-	//                     <Video customClass='episodes-vid' src='https://www.youtube.com/embed/08vEi-vhZIA' width='560' height='315' />
-	//                     <Text customClass='episodes-des' msg='The ruler is Back!
-	//                     First and second mover advantage is discussed in relation to Jay-Zs music and businesses as we see where and when he applies each. 
-	//                     Likewise, we see how Jigga has practically applied a couple of Warren Buffetts most famous pieces of advice and the rewards he has reaped.' />
-	//                 </div>
-	//             </div>
-	//         </div>
-	//     </div>
-	//     );
-	// }
-	// };
+	//          </div>
+	//          </div>
 
-	// export default Episodes;
+	//         )
+
+	//     }
+
+
+	// });
 
 /***/ },
 /* 258 */
@@ -27635,29 +27630,29 @@
 	  return _react2.default.createElement(
 	    'div',
 	    null,
-	    _react2.default.createElement(_Video2.default, { customClass: 'episode-vid', src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
-	    _react2.default.createElement(_Title2.default, { customClass: 'episode-title', msg: 'Episode 1 Transcript' }),
-	    _react2.default.createElement(_Text2.default, { customClass: 'episode-text', msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'ui container' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'ui grid' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'thirteen wide column centered' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'ui center aligned container' },
+	            _react2.default.createElement(_Video2.default, { src: 'https://www.youtube.com/embed/Jsb4EDtTDyk', width: '560', height: '315' }),
+	            _react2.default.createElement(_Title2.default, { msg: 'Episode 1 Transcript' })
+	          ),
+	          _react2.default.createElement(_Text2.default, { msg: 'A "rather unique" look at marketing and rap... \r In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.\r We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' })
+	        )
+	      )
+	    )
 	  );
 	};
 
 	exports.default = Episodes1;
-
-	// class Episodes1 extends React.Component{
-	//   render (){
-	//     return (
-	//       <div>
-	//         <Video customClass='episode-vid' src='https://www.youtube.com/embed/Jsb4EDtTDyk' width='560' height='315' />
-	//         <Title customClass='episode-title' msg='Episode 1 Transcript' />
-	//         <Text customClass='episode-text' msg='A "rather unique" look at marketing and rap... 
-	//         In this introductory episode, we go over some basic marketing frameworks (4Ps, 3As, 3Cs) and fit 2pac and Biggie into them.
-	//         We then view contemporary corporate strategy through Kanye Wests 2004 classic The College Dropout, closing with a special plea to Wale and Kendrick Lamar...Word to Drizzy and Cole' />
-	//       </div>
-	//     );
-	//   }
-	// };
-
-	// export default Episodes1;
 
 /***/ }
 /******/ ]);
